@@ -1,7 +1,25 @@
+:root {
+  --dark-primary: rgb(22, 22, 26);
+  --dark-secondary: #242629;
+
+  --dark-headline: #fffffe;
+  --dark-paragraph: #94a1b2;
+
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--dark-secondary);
+}
 
 a {
-  color: #00B7FF; }
+  color: #00B7FF;
+}
 
-/*# sourceMappingURL=style.css.map */
+.dark-primary {
+  background-color: var(--dark-primary);
+}
+
+.dark-secondary {
+  background-color: var(--dark-secondary);
+}
