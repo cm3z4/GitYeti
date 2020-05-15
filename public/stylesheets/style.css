@@ -25,6 +25,8 @@ a {
   background-color: var(--dark-secondary);
 }
 
+/* TRENDING */
+
 #since-drop,
 #type-drop,
 #spoke-drop,
@@ -46,6 +48,11 @@ a {
   border-radius: .1rem;
   -webkit-box-shadow: 5px 5px #2f3136;
   box-shadow: 5px 5px #2f3136;
+  transition: transform .3s;
+}
+
+.trend-divs:hover {
+  transform: scale(1.02);
 }
 
 .trending-cards {
@@ -58,4 +65,9 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.trending-img-size {
+  display: block;
+  width: 3rem;
 }
