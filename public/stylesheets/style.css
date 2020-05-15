@@ -1,0 +1,73 @@
+:root {
+  --dark-primary: rgb(22, 22, 26);
+  --dark-secondary: #242629;
+
+  --dark-headline: #fffffe;
+  --dark-paragraph: #94a1b2;
+
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: var(--dark-paragraph);
+  background-color: var(--dark-secondary);
+}
+
+a {
+  color: #00B7FF;
+}
+
+.dark-primary {
+  background-color: var(--dark-primary);
+}
+
+.dark-secondary {
+  background-color: var(--dark-secondary);
+}
+
+/* TRENDING */
+
+#since-drop,
+#type-drop,
+#spoke-drop,
+#lang-drop {
+  background-color: #202225 !important;
+  color: var(--dark-paragraph) !important;
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  width: 12rem;
+}
+
+.trend-divs {
+  background-color: #202225;
+  color: #94a1b2;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: .1rem;
+  -webkit-box-shadow: 5px 5px #2f3136;
+  box-shadow: 5px 5px #2f3136;
+  transition: transform .3s;
+}
+
+.trend-divs:hover {
+  transform: scale(1.02);
+}
+
+.trending-cards {
+  margin: .8rem 0 !important;
+}
+
+.text-limit {
+  display: block;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.trending-img-size {
+  display: block;
+  width: 3rem;
+}
