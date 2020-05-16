@@ -2874,9 +2874,11 @@ function getTrending() {
 
 $('#type-drop').on('change', function () {
     getTrending()
+    // $('#navSelectDiv').collapse('hide');
 });
 $('#since-drop').on('change', function () {
     getTrending()
+    // $('#navSelectDiv').collapse('hide');
 });
 
 // Start the API call on page load.
