@@ -2645,11 +2645,14 @@ function getTrending() {
 
     let type = document.getElementById('type-drop').value;
     console.log(type);
+    let lang = document.getElementById('lang-drop').value;
+    console.log(lang);
     let since = document.getElementById('since-drop').value;
     console.log(since);
 
     let apiType = "";
     let apiSince = "";
+    let apiLang = "";
 
     switch (type) {
         case 'repositories':
@@ -2658,18 +2661,28 @@ function getTrending() {
             switch (since) {
                 case 'daily':
                     // console.log("Case: daily");
-                    apiSince = "?since=daily"
+                    apiSince = "since=daily"
                     break;
                 case 'weekly':
-                    apiSince = "?since=weekly"
+                    apiSince = "since=weekly"
                     //console.log(apiSince);
                     break;
                 case 'monthly':
-                    apiSince = "?since=monthly"
+                    apiSince = "since=monthly"
                     //console.log(apiSince);
                     break;
                 default: // Do nothing.
             };
+
+            switch (lang) {
+                case 'all':
+                    // console.log("Case: daily");
+                    apiLang = "?"
+                    break;
+                default:
+                    apiLang = `?language=${lang}&`
+            };
+
             break;
         case 'developers':
             console.log("Case: developers");
@@ -2689,13 +2702,23 @@ function getTrending() {
                     break;
                 default: // Do nothing.
             };
+
+            switch (lang) {
+                case 'all':
+                    // console.log("Case: daily");
+                    apiLang = "?"
+                    break;
+                default:
+                    apiLang = `?language=${lang}&`
+            };
+
             break;
         default:
     };
 
     let axiosURL;
 
-    axiosURL = `https://github-trending-api.now.sh/${apiType}${apiSince}`;
+    axiosURL = `https://github-trending-api.now.sh/${apiType}${apiLang}${apiSince}`;
     console.log(axiosURL);
 
     axios.get(axiosURL)
@@ -2873,6 +2896,10 @@ function getTrending() {
 }
 
 $('#type-drop').on('change', function () {
+    getTrending()
+    // $('#navSelectDiv').collapse('hide');
+});
+$('#lang-drop').on('change', function () {
     getTrending()
     // $('#navSelectDiv').collapse('hide');
 });
