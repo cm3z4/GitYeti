@@ -66,9 +66,3 @@ a {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-.trending-img-size {
-  display: block;
-  width: 3rem;
-  background-color: white;
-}

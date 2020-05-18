@@ -2034,7 +2034,7 @@ function getTrending() {
                         if (columnCounter === 1 && parseInt(key) < 24) {
                             trendingCol1.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <img class="trending-cards trending-img-size rounded" src=${avatarR} alt="avatar">
+                                    <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
                                     <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
                                     <p class="trending-cards text-limit" title="${infoR}">${infoR}</p>
@@ -2047,7 +2047,7 @@ function getTrending() {
                         if (columnCounter === 2 && parseInt(key) < 24) {
                             trendingCol2.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <img class="trending-cards trending-img-size rounded" src=${avatarR} alt="avatar">
+                                <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
                                     <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
                                     <p class="trending-cards text-limit" title="${infoR}">${infoR}</p>
@@ -2060,7 +2060,7 @@ function getTrending() {
                         if (columnCounter === 3 && parseInt(key) < 24) {
                             trendingCol3.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <img class="trending-cards trending-img-size rounded" src=${avatarR} alt="avatar">
+                                <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards">${authorR}</h4>
                                     <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
                                     <p class="trending-cards text-limit" title="${infoR}">${infoR}</p>
@@ -2093,10 +2093,10 @@ function getTrending() {
                         if (columnCounter === 1 && parseInt(key) < 24) {
                             trendingCol1.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <img src=${avatar} class="trending-img-size rounded" alt="avatar">
+                                <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${name}</h4>
                                     <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
-                                    <h4 class="trending-cards">${repoName}</h4>
+                                    <h4 class="trending-cards text-limit">${repoName}</h4>
                                     <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
                                     <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
                                 </div>`);
@@ -2105,10 +2105,10 @@ function getTrending() {
                         if (columnCounter === 2 && parseInt(key) < 24) {
                             trendingCol2.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <img src=${avatar} class="trending-img-size rounded" alt="avatar">
+                                <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${name}</h4>
                                     <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
-                                    <h4 class="trending-cards">${repoName}</h4>
+                                    <h4 class="trending-cards text-limit">${repoName}</h4>
                                     <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
                                     <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
                                 </div>`);
@@ -2117,10 +2117,10 @@ function getTrending() {
                         if (columnCounter === 3 && parseInt(key) < 24) {
                             trendingCol3.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <img src=${avatar} class="trending-img-size rounded" alt="avatar">
+                                <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${name}</h4>
                                     <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
-                                    <h4 class="trending-cards">${repoName}</h4>
+                                    <h4 class="trending-cards text-limit">${repoName}</h4>
                                     <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
                                     <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
                                 </div>`);
