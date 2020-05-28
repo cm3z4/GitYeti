@@ -1,10 +1,6 @@
 console.log("main.js is working.");
 
-// const axios = require('axios');
-// const $ = require('jquery');
-
 // This function uses the https://github.com/huchenme/github-trending-api repo, see link for docs.
-
 
 // Fill #lang-drop with langs data.
 const langs = [{
@@ -1917,6 +1913,16 @@ function getTrending() {
         case 'repositories':
             // console.log("Case: repositories");
             apiType = "repositories";
+
+            switch (lang) {
+                case 'all':
+                    // console.log("Case: daily");
+                    apiLang = encodeURIComponent("?");
+                    break;
+                default:
+                    apiLang = `${encodeURIComponent("?")}language=${lang}&`
+            };
+
             switch (since) {
                 case 'daily':
                     // console.log("Case: daily");
@@ -1933,57 +1939,53 @@ function getTrending() {
                 default: // Do nothing.
             };
 
-            switch (lang) {
-                case 'all':
-                    // console.log("Case: daily");
-                    apiLang = "?"
-                    break;
-                default:
-                    apiLang = `?language=${lang}&`
-            };
-
             break;
         case 'developers':
             console.log("Case: developers");
             apiType = "developers";
-            switch (since) {
-                case 'daily':
-                    // console.log("Case: daily");
-                    apiSince = "?since=daily"
-                    break;
-                case 'weekly':
-                    apiSince = "?since=weekly"
-                    //console.log(apiSince);
-                    break;
-                case 'monthly':
-                    apiSince = "?since=monthly"
-                    //console.log(apiSince);
-                    break;
-                default: // Do nothing.
-            };
 
             switch (lang) {
                 case 'all':
                     // console.log("Case: daily");
-                    apiLang = "?"
+                    apiLang = encodeURIComponent("?");
                     break;
                 default:
-                    apiLang = `?language=${lang}&`
+                    apiLang = `${encodeURIComponent("?")}language=${lang}&`;
+            };
+
+            switch (since) {
+                case 'daily':
+                    // console.log("Case: daily");
+                    apiSince = "since=daily"
+                    break;
+                case 'weekly':
+                    apiSince = "since=weekly"
+                    //console.log(apiSince);
+                    break;
+                case 'monthly':
+                    apiSince = "since=monthly"
+                    //console.log(apiSince);
+                    break;
+                default: // Do nothing.
             };
 
             break;
         default:
     };
 
-    let axiosURL;
+    let ajaxURL;
 
-    axiosURL = `https://github-trending-api.now.sh/${apiType}${apiLang}${apiSince}`;
-    console.log(axiosURL);
+    ajaxURL = `/api/${apiType}/${apiLang}/${apiSince}`;
 
-    axios.get(axiosURL)
-        .then(function (response) {
+    // console.log(ajaxURL);
 
-            //console.log(response.data);
+    $.ajax({
+        type: "GET",
+        url: ajaxURL,
+        success: function (response) {
+
+
+            //console.log(response);
 
             var trendingCol1 = document.createElement('div');
             trendingCol1.setAttribute('class', 'trend-cont');
@@ -1997,37 +1999,37 @@ function getTrending() {
             // Variable for keeping track of which column to place content, see below for logic.
             let columnCounter = 1;
 
-            Object.keys(response.data).forEach(key => {
+            Object.keys(response).forEach(key => {
 
                 // console.log(key);
 
                 switch (apiType) {
                     case 'repositories':
 
-                        let authorR = JSON.stringify(response.data[key].author).replace(/['"]+/g, '');
-                        let avatarR = JSON.stringify(response.data[key].avatar);
-                        let repoR = JSON.stringify(response.data[key].url).replace(/['"]+/g, '');
-                        let infoR = JSON.stringify(response.data[key].description).replace(/['"]+/g, '');
-                        let starsR = JSON.stringify(response.data[key].stars);
-                        let forksR = JSON.stringify(response.data[key].forks).replace(/['"]+/g, '');
+                        let authorR = JSON.stringify(response[key].author).replace(/['"]+/g, '');
+                        let avatarR = JSON.stringify(response[key].avatar);
+                        let repoR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
+                        let infoR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
+                        let starsR = JSON.stringify(response[key].stars);
+                        let forksR = JSON.stringify(response[key].forks).replace(/['"]+/g, '');
                         let langR;
                         let langColorR;
 
                         // Check is language object exists.
-                        if (response.data[key].language) {
-                            langR = JSON.stringify(response.data[key].language).replace(/['"]+/g, '');
+                        if (response[key].language) {
+                            langR = JSON.stringify(response[key].language).replace(/['"]+/g, '');
                         } else {
                             langR = "Unknown";
                             langColorR = "#f25f4c"
                         }
 
                         // Check is languageColor object exists.
-                        if (response.data[key].languageColor) {
-                            langColorR = JSON.stringify(response.data[key].languageColor).replace(/['"]+/g, '');
+                        if (response[key].languageColor) {
+                            langColorR = JSON.stringify(response[key].languageColor).replace(/['"]+/g, '');
                         }
 
                         // Check is description object is empty.
-                        if (response.data[key].description === "") {
+                        if (response[key].description === "") {
                             infoR = "No Description."
                         }
 
@@ -2079,16 +2081,16 @@ function getTrending() {
 
                         break;
                     case 'developers':
-                        let userName = JSON.stringify(response.data[key].username).replace(/['"]+/g, '');
-                        let name = JSON.stringify(response.data[key].name).replace(/['"]+/g, '');
+                        let userName = JSON.stringify(response[key].username).replace(/['"]+/g, '');
+                        let name = JSON.stringify(response[key].name).replace(/['"]+/g, '');
                         // let type = JSON.stringify(response.data[key].type).replace(/['"]+/g, '');
-                        let userURL = JSON.stringify(response.data[key].url).replace(/['"]+/g, '');
-                        let avatar = JSON.stringify(response.data[key].avatar);
-                        let repoName = JSON.stringify(response.data[key].repo.name).replace(/['"]+/g, '');
-                        let repoInfo = JSON.stringify(response.data[key].repo.description).replace(/['"]+/g, '');
-                        let repoURL = JSON.stringify(response.data[key].repo.url).replace(/['"]+/g, '');
+                        let userURL = JSON.stringify(response[key].url).replace(/['"]+/g, '');
+                        let avatar = JSON.stringify(response[key].avatar);
+                        let repoName = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
+                        let repoInfo = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
+                        let repoURL = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
 
-                        let stars = JSON.stringify(response.data[key].stars);
+                        let stars = JSON.stringify(response[key].stars);
 
                         if (columnCounter === 1 && parseInt(key) < 24) {
                             trendingCol1.insertAdjacentHTML("beforeend",
@@ -2138,9 +2140,9 @@ function getTrending() {
 
             });
 
-            if (response.data.length === 0) {
+            if (response.length === 0) {
                 $('#sandbox-1').empty();
-                $('#sandbox-2').html(`<div class="text-center"><p>No data found! Try again.</h2></p>`);
+                $('#sandbox-2').html(`<div class="text-center"><p class="mt-5 mb-0" style="font-weight: bold">&#128577 No repos/devs found.</p>`);
                 $('#sandbox-3').empty();
             } else {
                 $('#sandbox-1').html(trendingCol1);
@@ -2148,16 +2150,17 @@ function getTrending() {
                 $('#sandbox-3').html(trendingCol3);
             }
 
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
-        .finally(function () {
-            // always executed
-        });
+        },
+        error: function (xhr, status, errorThrown) {
+            //Here the status code can be retrieved like;
+            xhr.status;
 
-}
+            //The message added to Response object in Controller can be retrieved as following.
+            xhr.responseText;
+        }
+    });
+
+};
 
 // Call getTrending() when any select elements are changed.
 $('.nav-item').on('change', function () {
