@@ -1913,21 +1913,6 @@ function getTrending() {
         case 'repositories':
             // console.log("Case: repositories");
             apiType = "repositories";
-            switch (since) {
-                case 'daily':
-                    // console.log("Case: daily");
-                    apiSince = "since=daily"
-                    break;
-                case 'weekly':
-                    apiSince = "since=weekly"
-                    //console.log(apiSince);
-                    break;
-                case 'monthly':
-                    apiSince = "since=monthly"
-                    //console.log(apiSince);
-                    break;
-                default: // Do nothing.
-            };
 
             switch (lang) {
                 case 'all':
@@ -1938,10 +1923,6 @@ function getTrending() {
                     apiLang = `${encodeURIComponent("?")}language=${lang}&`
             };
 
-            break;
-        case 'developers':
-            console.log("Case: developers");
-            apiType = "developers";
             switch (since) {
                 case 'daily':
                     // console.log("Case: daily");
@@ -1958,6 +1939,11 @@ function getTrending() {
                 default: // Do nothing.
             };
 
+            break;
+        case 'developers':
+            console.log("Case: developers");
+            apiType = "developers";
+
             switch (lang) {
                 case 'all':
                     // console.log("Case: daily");
@@ -1965,6 +1951,22 @@ function getTrending() {
                     break;
                 default:
                     apiLang = `${encodeURIComponent("?")}language=${lang}&`;
+            };
+
+            switch (since) {
+                case 'daily':
+                    // console.log("Case: daily");
+                    apiSince = "since=daily"
+                    break;
+                case 'weekly':
+                    apiSince = "since=weekly"
+                    //console.log(apiSince);
+                    break;
+                case 'monthly':
+                    apiSince = "since=monthly"
+                    //console.log(apiSince);
+                    break;
+                default: // Do nothing.
             };
 
             break;
@@ -1977,59 +1979,63 @@ function getTrending() {
 
     // console.log(ajaxURL);
 
-    $.getJSON(ajaxURL, function (response) {
+    $.ajax({
+        type: "GET",
+        url: ajaxURL,
+        success: function (response) {
 
-        //console.log(response);
 
-        var trendingCol1 = document.createElement('div');
-        trendingCol1.setAttribute('class', 'trend-cont');
+            //console.log(response);
 
-        var trendingCol2 = document.createElement('div');
-        trendingCol2.setAttribute('class', 'trend-cont');
+            var trendingCol1 = document.createElement('div');
+            trendingCol1.setAttribute('class', 'trend-cont');
 
-        var trendingCol3 = document.createElement('div');
-        trendingCol3.setAttribute('class', 'trend-cont');
+            var trendingCol2 = document.createElement('div');
+            trendingCol2.setAttribute('class', 'trend-cont');
 
-        // Variable for keeping track of which column to place content, see below for logic.
-        let columnCounter = 1;
+            var trendingCol3 = document.createElement('div');
+            trendingCol3.setAttribute('class', 'trend-cont');
 
-        Object.keys(response).forEach(key => {
+            // Variable for keeping track of which column to place content, see below for logic.
+            let columnCounter = 1;
 
-            // console.log(key);
+            Object.keys(response).forEach(key => {
 
-            switch (apiType) {
-                case 'repositories':
+                // console.log(key);
 
-                    let authorR = JSON.stringify(response[key].author).replace(/['"]+/g, '');
-                    let avatarR = JSON.stringify(response[key].avatar);
-                    let repoR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
-                    let infoR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
-                    let starsR = JSON.stringify(response[key].stars);
-                    let forksR = JSON.stringify(response[key].forks).replace(/['"]+/g, '');
-                    let langR;
-                    let langColorR;
+                switch (apiType) {
+                    case 'repositories':
 
-                    // Check is language object exists.
-                    if (response[key].language) {
-                        langR = JSON.stringify(response[key].language).replace(/['"]+/g, '');
-                    } else {
-                        langR = "Unknown";
-                        langColorR = "#f25f4c"
-                    }
+                        let authorR = JSON.stringify(response[key].author).replace(/['"]+/g, '');
+                        let avatarR = JSON.stringify(response[key].avatar);
+                        let repoR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
+                        let infoR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
+                        let starsR = JSON.stringify(response[key].stars);
+                        let forksR = JSON.stringify(response[key].forks).replace(/['"]+/g, '');
+                        let langR;
+                        let langColorR;
 
-                    // Check is languageColor object exists.
-                    if (response[key].languageColor) {
-                        langColorR = JSON.stringify(response[key].languageColor).replace(/['"]+/g, '');
-                    }
+                        // Check is language object exists.
+                        if (response[key].language) {
+                            langR = JSON.stringify(response[key].language).replace(/['"]+/g, '');
+                        } else {
+                            langR = "Unknown";
+                            langColorR = "#f25f4c"
+                        }
 
-                    // Check is description object is empty.
-                    if (response[key].description === "") {
-                        infoR = "No Description."
-                    }
+                        // Check is languageColor object exists.
+                        if (response[key].languageColor) {
+                            langColorR = JSON.stringify(response[key].languageColor).replace(/['"]+/g, '');
+                        }
 
-                    if (columnCounter === 1 && parseInt(key) < 24) {
-                        trendingCol1.insertAdjacentHTML("beforeend",
-                            `<div class="content trend-divs rounded">
+                        // Check is description object is empty.
+                        if (response[key].description === "") {
+                            infoR = "No Description."
+                        }
+
+                        if (columnCounter === 1 && parseInt(key) < 24) {
+                            trendingCol1.insertAdjacentHTML("beforeend",
+                                `<div class="content trend-divs rounded">
                                     <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
                                     <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
@@ -2038,11 +2044,11 @@ function getTrending() {
                                     <p class="trending-cards"><img src="../images/star.svg" width="16" alt="Star icon."> ${starsR}</p>
                                     <p class="trending-cards"><img src="../images/fork.svg" width="16;" alt="Fork icon."> ${forksR}</p>
                                 </div>`);
-                    }
+                        }
 
-                    if (columnCounter === 2 && parseInt(key) < 24) {
-                        trendingCol2.insertAdjacentHTML("beforeend",
-                            `<div class="content trend-divs rounded">
+                        if (columnCounter === 2 && parseInt(key) < 24) {
+                            trendingCol2.insertAdjacentHTML("beforeend",
+                                `<div class="content trend-divs rounded">
                                 <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
                                     <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
@@ -2051,11 +2057,11 @@ function getTrending() {
                                     <p class="trending-cards"><img src="../images/star.svg" width="16" alt="Star icon."> ${starsR}</p>
                                     <p class="trending-cards"><img src="../images/fork.svg" width="16;" alt="Fork icon."> ${forksR}</p>
                                 </div>`);
-                    }
+                        }
 
-                    if (columnCounter === 3 && parseInt(key) < 24) {
-                        trendingCol3.insertAdjacentHTML("beforeend",
-                            `<div class="content trend-divs rounded">
+                        if (columnCounter === 3 && parseInt(key) < 24) {
+                            trendingCol3.insertAdjacentHTML("beforeend",
+                                `<div class="content trend-divs rounded">
                                 <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards">${authorR}</h4>
                                     <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
@@ -2064,31 +2070,31 @@ function getTrending() {
                                     <p class="trending-cards"><img src="../images/star.svg" width="16" alt="Star icon."> ${starsR}</p>
                                     <p class="trending-cards"><img src="../images/fork.svg" width="16;" alt="Fork icon."> ${forksR}</p>
                                 </div>`);
-                    }
+                        }
 
-                    // Logic for counter which column to inject content accordingly.
-                    columnCounter++;
+                        // Logic for counter which column to inject content accordingly.
+                        columnCounter++;
 
-                    if (columnCounter === 4) {
-                        columnCounter = 1;
-                    }
+                        if (columnCounter === 4) {
+                            columnCounter = 1;
+                        }
 
-                    break;
-                case 'developers':
-                    let userName = JSON.stringify(response[key].username).replace(/['"]+/g, '');
-                    let name = JSON.stringify(response[key].name).replace(/['"]+/g, '');
-                    // let type = JSON.stringify(response.data[key].type).replace(/['"]+/g, '');
-                    let userURL = JSON.stringify(response[key].url).replace(/['"]+/g, '');
-                    let avatar = JSON.stringify(response[key].avatar);
-                    let repoName = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
-                    let repoInfo = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
-                    let repoURL = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
+                        break;
+                    case 'developers':
+                        let userName = JSON.stringify(response[key].username).replace(/['"]+/g, '');
+                        let name = JSON.stringify(response[key].name).replace(/['"]+/g, '');
+                        // let type = JSON.stringify(response.data[key].type).replace(/['"]+/g, '');
+                        let userURL = JSON.stringify(response[key].url).replace(/['"]+/g, '');
+                        let avatar = JSON.stringify(response[key].avatar);
+                        let repoName = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
+                        let repoInfo = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
+                        let repoURL = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
 
-                    let stars = JSON.stringify(response[key].stars);
+                        let stars = JSON.stringify(response[key].stars);
 
-                    if (columnCounter === 1 && parseInt(key) < 24) {
-                        trendingCol1.insertAdjacentHTML("beforeend",
-                            `<div class="content trend-divs rounded">
+                        if (columnCounter === 1 && parseInt(key) < 24) {
+                            trendingCol1.insertAdjacentHTML("beforeend",
+                                `<div class="content trend-divs rounded">
                                 <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${name}</h4>
                                     <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
@@ -2096,11 +2102,11 @@ function getTrending() {
                                     <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
                                     <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
                                 </div>`);
-                    }
+                        }
 
-                    if (columnCounter === 2 && parseInt(key) < 24) {
-                        trendingCol2.insertAdjacentHTML("beforeend",
-                            `<div class="content trend-divs rounded">
+                        if (columnCounter === 2 && parseInt(key) < 24) {
+                            trendingCol2.insertAdjacentHTML("beforeend",
+                                `<div class="content trend-divs rounded">
                                 <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${name}</h4>
                                     <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
@@ -2108,11 +2114,11 @@ function getTrending() {
                                     <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
                                     <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
                                 </div>`);
-                    }
+                        }
 
-                    if (columnCounter === 3 && parseInt(key) < 24) {
-                        trendingCol3.insertAdjacentHTML("beforeend",
-                            `<div class="content trend-divs rounded">
+                        if (columnCounter === 3 && parseInt(key) < 24) {
+                            trendingCol3.insertAdjacentHTML("beforeend",
+                                `<div class="content trend-divs rounded">
                                 <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${name}</h4>
                                     <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
@@ -2120,33 +2126,41 @@ function getTrending() {
                                     <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
                                     <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
                                 </div>`);
-                    }
+                        }
 
-                    // Logic for counter which column to inject content accordingly.
-                    columnCounter++;
+                        // Logic for counter which column to inject content accordingly.
+                        columnCounter++;
 
-                    if (columnCounter === 4) {
-                        columnCounter = 1;
-                    }
-                    break;
-                default:
-            };
+                        if (columnCounter === 4) {
+                            columnCounter = 1;
+                        }
+                        break;
+                    default:
+                };
 
-        });
+            });
 
-        if (response.length === 0) {
-            $('#sandbox-1').empty();
-            $('#sandbox-2').html(`<div class="text-center"><p>No repos/devs found. You broke it!!!.</h2></p>`);
-            $('#sandbox-3').empty();
-        } else {
-            $('#sandbox-1').html(trendingCol1);
-            $('#sandbox-2').html(trendingCol2);
-            $('#sandbox-3').html(trendingCol3);
+            if (response.length === 0) {
+                $('#sandbox-1').empty();
+                $('#sandbox-2').html(`<div class="text-center"><p class="mt-5 mb-0" style="font-weight: bold">&#128577 No repos/devs found.</p>`);
+                $('#sandbox-3').empty();
+            } else {
+                $('#sandbox-1').html(trendingCol1);
+                $('#sandbox-2').html(trendingCol2);
+                $('#sandbox-3').html(trendingCol3);
+            }
+
+        },
+        error: function (xhr, status, errorThrown) {
+            //Here the status code can be retrieved like;
+            xhr.status;
+
+            //The message added to Response object in Controller can be retrieved as following.
+            xhr.responseText;
         }
+    });
 
-    })
-
-}
+};
 
 // Call getTrending() when any select elements are changed.
 $('.nav-item').on('change', function () {
