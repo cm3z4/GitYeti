@@ -5,1893 +5,1893 @@ console.log("main.js is working.");
 // Fill #lang-drop with langs data.
 const langs = [{
         "urlParam": "1c-enterprise",
-        "name": "1C Enterprise"
+        "nameD": "1C Enterprise"
     },
     {
         "urlParam": "abap",
-        "name": "ABAP"
+        "nameD": "ABAP"
     },
     {
         "urlParam": "abnf",
-        "name": "ABNF"
+        "nameD": "ABNF"
     },
     {
         "urlParam": "actionscript",
-        "name": "ActionScript"
+        "nameD": "ActionScript"
     },
     {
         "urlParam": "ada",
-        "name": "Ada"
+        "nameD": "Ada"
     },
     {
         "urlParam": "adobe-font-metrics",
-        "name": "Adobe Font Metrics"
+        "nameD": "Adobe Font Metrics"
     },
     {
         "urlParam": "agda",
-        "name": "Agda"
+        "nameD": "Agda"
     },
     {
         "urlParam": "ags-script",
-        "name": "AGS Script"
+        "nameD": "AGS Script"
     },
     {
         "urlParam": "alloy",
-        "name": "Alloy"
+        "nameD": "Alloy"
     },
     {
         "urlParam": "alpine-abuild",
-        "name": "Alpine Abuild"
+        "nameD": "Alpine Abuild"
     },
     {
         "urlParam": "ampl",
-        "name": "AMPL"
+        "nameD": "AMPL"
     },
     {
         "urlParam": "angelscript",
-        "name": "AngelScript"
+        "nameD": "AngelScript"
     },
     {
         "urlParam": "ant-build-system",
-        "name": "Ant Build System"
+        "nameD": "Ant Build System"
     },
     {
         "urlParam": "antlr",
-        "name": "ANTLR"
+        "nameD": "ANTLR"
     },
     {
         "urlParam": "apacheconf",
-        "name": "ApacheConf"
+        "nameD": "ApacheConf"
     },
     {
         "urlParam": "apex",
-        "name": "Apex"
+        "nameD": "Apex"
     },
     {
         "urlParam": "api-blueprint",
-        "name": "API Blueprint"
+        "nameD": "API Blueprint"
     },
     {
         "urlParam": "apl",
-        "name": "APL"
+        "nameD": "APL"
     },
     {
         "urlParam": "apollo-guidance-computer",
-        "name": "Apollo Guidance Computer"
+        "nameD": "Apollo Guidance Computer"
     },
     {
         "urlParam": "applescript",
-        "name": "AppleScript"
+        "nameD": "AppleScript"
     },
     {
         "urlParam": "arc",
-        "name": "Arc"
+        "nameD": "Arc"
     },
     {
         "urlParam": "asciidoc",
-        "name": "AsciiDoc"
+        "nameD": "AsciiDoc"
     },
     {
         "urlParam": "asn.1",
-        "name": "ASN.1"
+        "nameD": "ASN.1"
     },
     {
         "urlParam": "asp",
-        "name": "ASP"
+        "nameD": "ASP"
     },
     {
         "urlParam": "aspectj",
-        "name": "AspectJ"
+        "nameD": "AspectJ"
     },
     {
         "urlParam": "assembly",
-        "name": "Assembly"
+        "nameD": "Assembly"
     },
     {
         "urlParam": "ats",
-        "name": "ATS"
+        "nameD": "ATS"
     },
     {
         "urlParam": "augeas",
-        "name": "Augeas"
+        "nameD": "Augeas"
     },
     {
         "urlParam": "autohotkey",
-        "name": "AutoHotkey"
+        "nameD": "AutoHotkey"
     },
     {
         "urlParam": "autoit",
-        "name": "AutoIt"
+        "nameD": "AutoIt"
     },
     {
         "urlParam": "awk",
-        "name": "Awk"
+        "nameD": "Awk"
     },
     {
         "urlParam": "ballerina",
-        "name": "Ballerina"
+        "nameD": "Ballerina"
     },
     {
         "urlParam": "batchfile",
-        "name": "Batchfile"
+        "nameD": "Batchfile"
     },
     {
         "urlParam": "befunge",
-        "name": "Befunge"
+        "nameD": "Befunge"
     },
     {
         "urlParam": "bison",
-        "name": "Bison"
+        "nameD": "Bison"
     },
     {
         "urlParam": "bitbake",
-        "name": "BitBake"
+        "nameD": "BitBake"
     },
     {
         "urlParam": "blade",
-        "name": "Blade"
+        "nameD": "Blade"
     },
     {
         "urlParam": "blitzbasic",
-        "name": "BlitzBasic"
+        "nameD": "BlitzBasic"
     },
     {
         "urlParam": "blitzmax",
-        "name": "BlitzMax"
+        "nameD": "BlitzMax"
     },
     {
         "urlParam": "bluespec",
-        "name": "Bluespec"
+        "nameD": "Bluespec"
     },
     {
         "urlParam": "boo",
-        "name": "Boo"
+        "nameD": "Boo"
     },
     {
         "urlParam": "brainfuck",
-        "name": "Brainfuck"
+        "nameD": "Brainfuck"
     },
     {
         "urlParam": "brightscript",
-        "name": "Brightscript"
+        "nameD": "Brightscript"
     },
     {
         "urlParam": "bro",
-        "name": "Bro"
+        "nameD": "Bro"
     },
     {
         "urlParam": "c",
-        "name": "C"
+        "nameD": "C"
     },
     {
         "urlParam": "c%23",
-        "name": "C#"
+        "nameD": "C#"
     },
     {
         "urlParam": "c%2B%2B",
-        "name": "C++"
+        "nameD": "C++"
     },
     {
         "urlParam": "c-objdump",
-        "name": "C-ObjDump"
+        "nameD": "C-ObjDump"
     },
     {
         "urlParam": "c2hs-haskell",
-        "name": "C2hs Haskell"
+        "nameD": "C2hs Haskell"
     },
     {
         "urlParam": "cap'n-proto",
-        "name": "Cap'n Proto"
+        "nameD": "Cap'n Proto"
     },
     {
         "urlParam": "cartocss",
-        "name": "CartoCSS"
+        "nameD": "CartoCSS"
     },
     {
         "urlParam": "ceylon",
-        "name": "Ceylon"
+        "nameD": "Ceylon"
     },
     {
         "urlParam": "chapel",
-        "name": "Chapel"
+        "nameD": "Chapel"
     },
     {
         "urlParam": "charity",
-        "name": "Charity"
+        "nameD": "Charity"
     },
     {
         "urlParam": "chuck",
-        "name": "ChucK"
+        "nameD": "ChucK"
     },
     {
         "urlParam": "cirru",
-        "name": "Cirru"
+        "nameD": "Cirru"
     },
     {
         "urlParam": "clarion",
-        "name": "Clarion"
+        "nameD": "Clarion"
     },
     {
         "urlParam": "clean",
-        "name": "Clean"
+        "nameD": "Clean"
     },
     {
         "urlParam": "click",
-        "name": "Click"
+        "nameD": "Click"
     },
     {
         "urlParam": "clips",
-        "name": "CLIPS"
+        "nameD": "CLIPS"
     },
     {
         "urlParam": "clojure",
-        "name": "Clojure"
+        "nameD": "Clojure"
     },
     {
         "urlParam": "closure-templates",
-        "name": "Closure Templates"
+        "nameD": "Closure Templates"
     },
     {
         "urlParam": "cmake",
-        "name": "CMake"
+        "nameD": "CMake"
     },
     {
         "urlParam": "cobol",
-        "name": "COBOL"
+        "nameD": "COBOL"
     },
     {
         "urlParam": "coffeescript",
-        "name": "CoffeeScript"
+        "nameD": "CoffeeScript"
     },
     {
         "urlParam": "coldfusion",
-        "name": "ColdFusion"
+        "nameD": "ColdFusion"
     },
     {
         "urlParam": "coldfusion-cfc",
-        "name": "ColdFusion CFC"
+        "nameD": "ColdFusion CFC"
     },
     {
         "urlParam": "collada",
-        "name": "COLLADA"
+        "nameD": "COLLADA"
     },
     {
         "urlParam": "common-lisp",
-        "name": "Common Lisp"
+        "nameD": "Common Lisp"
     },
     {
         "urlParam": "common-workflow-language",
-        "name": "Common Workflow Language"
+        "nameD": "Common Workflow Language"
     },
     {
         "urlParam": "component-pascal",
-        "name": "Component Pascal"
+        "nameD": "Component Pascal"
     },
     {
         "urlParam": "cool",
-        "name": "Cool"
+        "nameD": "Cool"
     },
     {
         "urlParam": "coq",
-        "name": "Coq"
+        "nameD": "Coq"
     },
     {
         "urlParam": "cpp-objdump",
-        "name": "Cpp-ObjDump"
+        "nameD": "Cpp-ObjDump"
     },
     {
         "urlParam": "creole",
-        "name": "Creole"
+        "nameD": "Creole"
     },
     {
         "urlParam": "crystal",
-        "name": "Crystal"
+        "nameD": "Crystal"
     },
     {
         "urlParam": "cson",
-        "name": "CSON"
+        "nameD": "CSON"
     },
     {
         "urlParam": "csound",
-        "name": "Csound"
+        "nameD": "Csound"
     },
     {
         "urlParam": "csound-document",
-        "name": "Csound Document"
+        "nameD": "Csound Document"
     },
     {
         "urlParam": "csound-score",
-        "name": "Csound Score"
+        "nameD": "Csound Score"
     },
     {
         "urlParam": "css",
-        "name": "CSS"
+        "nameD": "CSS"
     },
     {
         "urlParam": "csv",
-        "name": "CSV"
+        "nameD": "CSV"
     },
     {
         "urlParam": "cuda",
-        "name": "Cuda"
+        "nameD": "Cuda"
     },
     {
         "urlParam": "cweb",
-        "name": "CWeb"
+        "nameD": "CWeb"
     },
     {
         "urlParam": "cycript",
-        "name": "Cycript"
+        "nameD": "Cycript"
     },
     {
         "urlParam": "cython",
-        "name": "Cython"
+        "nameD": "Cython"
     },
     {
         "urlParam": "d",
-        "name": "D"
+        "nameD": "D"
     },
     {
         "urlParam": "d-objdump",
-        "name": "D-ObjDump"
+        "nameD": "D-ObjDump"
     },
     {
         "urlParam": "darcs-patch",
-        "name": "Darcs Patch"
+        "nameD": "Darcs Patch"
     },
     {
         "urlParam": "dart",
-        "name": "Dart"
+        "nameD": "Dart"
     },
     {
         "urlParam": "dataweave",
-        "name": "DataWeave"
+        "nameD": "DataWeave"
     },
     {
         "urlParam": "desktop",
-        "name": "desktop"
+        "nameD": "desktop"
     },
     {
         "urlParam": "diff",
-        "name": "Diff"
+        "nameD": "Diff"
     },
     {
         "urlParam": "digital-command-language",
-        "name": "DIGITAL Command Language"
+        "nameD": "DIGITAL Command Language"
     },
     {
         "urlParam": "dm",
-        "name": "DM"
+        "nameD": "DM"
     },
     {
         "urlParam": "dns-zone",
-        "name": "DNS Zone"
+        "nameD": "DNS Zone"
     },
     {
         "urlParam": "dockerfile",
-        "name": "Dockerfile"
+        "nameD": "Dockerfile"
     },
     {
         "urlParam": "dogescript",
-        "name": "Dogescript"
+        "nameD": "Dogescript"
     },
     {
         "urlParam": "dtrace",
-        "name": "DTrace"
+        "nameD": "DTrace"
     },
     {
         "urlParam": "dylan",
-        "name": "Dylan"
+        "nameD": "Dylan"
     },
     {
         "urlParam": "e",
-        "name": "E"
+        "nameD": "E"
     },
     {
         "urlParam": "eagle",
-        "name": "Eagle"
+        "nameD": "Eagle"
     },
     {
         "urlParam": "easybuild",
-        "name": "Easybuild"
+        "nameD": "Easybuild"
     },
     {
         "urlParam": "ebnf",
-        "name": "EBNF"
+        "nameD": "EBNF"
     },
     {
         "urlParam": "ec",
-        "name": "eC"
+        "nameD": "eC"
     },
     {
         "urlParam": "ecere-projects",
-        "name": "Ecere Projects"
+        "nameD": "Ecere Projects"
     },
     {
         "urlParam": "ecl",
-        "name": "ECL"
+        "nameD": "ECL"
     },
     {
         "urlParam": "eclipse",
-        "name": "ECLiPSe"
+        "nameD": "ECLiPSe"
     },
     {
         "urlParam": "edje-data-collection",
-        "name": "Edje Data Collection"
+        "nameD": "Edje Data Collection"
     },
     {
         "urlParam": "edn",
-        "name": "edn"
+        "nameD": "edn"
     },
     {
         "urlParam": "eiffel",
-        "name": "Eiffel"
+        "nameD": "Eiffel"
     },
     {
         "urlParam": "ejs",
-        "name": "EJS"
+        "nameD": "EJS"
     },
     {
         "urlParam": "elixir",
-        "name": "Elixir"
+        "nameD": "Elixir"
     },
     {
         "urlParam": "elm",
-        "name": "Elm"
+        "nameD": "Elm"
     },
     {
         "urlParam": "emacs-lisp",
-        "name": "Emacs Lisp"
+        "nameD": "Emacs Lisp"
     },
     {
         "urlParam": "emberscript",
-        "name": "EmberScript"
+        "nameD": "EmberScript"
     },
     {
         "urlParam": "eq",
-        "name": "EQ"
+        "nameD": "EQ"
     },
     {
         "urlParam": "erlang",
-        "name": "Erlang"
+        "nameD": "Erlang"
     },
     {
         "urlParam": "f%23",
-        "name": "F#"
+        "nameD": "F#"
     },
     {
         "urlParam": "factor",
-        "name": "Factor"
+        "nameD": "Factor"
     },
     {
         "urlParam": "fancy",
-        "name": "Fancy"
+        "nameD": "Fancy"
     },
     {
         "urlParam": "fantom",
-        "name": "Fantom"
+        "nameD": "Fantom"
     },
     {
         "urlParam": "filebench-wml",
-        "name": "Filebench WML"
+        "nameD": "Filebench WML"
     },
     {
         "urlParam": "filterscript",
-        "name": "Filterscript"
+        "nameD": "Filterscript"
     },
     {
         "urlParam": "fish",
-        "name": "fish"
+        "nameD": "fish"
     },
     {
         "urlParam": "flux",
-        "name": "FLUX"
+        "nameD": "FLUX"
     },
     {
         "urlParam": "formatted",
-        "name": "Formatted"
+        "nameD": "Formatted"
     },
     {
         "urlParam": "forth",
-        "name": "Forth"
+        "nameD": "Forth"
     },
     {
         "urlParam": "fortran",
-        "name": "Fortran"
+        "nameD": "Fortran"
     },
     {
         "urlParam": "freemarker",
-        "name": "FreeMarker"
+        "nameD": "FreeMarker"
     },
     {
         "urlParam": "frege",
-        "name": "Frege"
+        "nameD": "Frege"
     },
     {
         "urlParam": "g-code",
-        "name": "G-code"
+        "nameD": "G-code"
     },
     {
         "urlParam": "game-maker-language",
-        "name": "Game Maker Language"
+        "nameD": "Game Maker Language"
     },
     {
         "urlParam": "gams",
-        "name": "GAMS"
+        "nameD": "GAMS"
     },
     {
         "urlParam": "gap",
-        "name": "GAP"
+        "nameD": "GAP"
     },
     {
         "urlParam": "gcc-machine-description",
-        "name": "GCC Machine Description"
+        "nameD": "GCC Machine Description"
     },
     {
         "urlParam": "gdb",
-        "name": "GDB"
+        "nameD": "GDB"
     },
     {
         "urlParam": "gdscript",
-        "name": "GDScript"
+        "nameD": "GDScript"
     },
     {
         "urlParam": "genie",
-        "name": "Genie"
+        "nameD": "Genie"
     },
     {
         "urlParam": "genshi",
-        "name": "Genshi"
+        "nameD": "Genshi"
     },
     {
         "urlParam": "gentoo-ebuild",
-        "name": "Gentoo Ebuild"
+        "nameD": "Gentoo Ebuild"
     },
     {
         "urlParam": "gentoo-eclass",
-        "name": "Gentoo Eclass"
+        "nameD": "Gentoo Eclass"
     },
     {
         "urlParam": "gerber-image",
-        "name": "Gerber Image"
+        "nameD": "Gerber Image"
     },
     {
         "urlParam": "gettext-catalog",
-        "name": "Gettext Catalog"
+        "nameD": "Gettext Catalog"
     },
     {
         "urlParam": "gherkin",
-        "name": "Gherkin"
+        "nameD": "Gherkin"
     },
     {
         "urlParam": "glsl",
-        "name": "GLSL"
+        "nameD": "GLSL"
     },
     {
         "urlParam": "glyph",
-        "name": "Glyph"
+        "nameD": "Glyph"
     },
     {
         "urlParam": "gn",
-        "name": "GN"
+        "nameD": "GN"
     },
     {
         "urlParam": "gnuplot",
-        "name": "Gnuplot"
+        "nameD": "Gnuplot"
     },
     {
         "urlParam": "go",
-        "name": "Go"
+        "nameD": "Go"
     },
     {
         "urlParam": "golo",
-        "name": "Golo"
+        "nameD": "Golo"
     },
     {
         "urlParam": "gosu",
-        "name": "Gosu"
+        "nameD": "Gosu"
     },
     {
         "urlParam": "grace",
-        "name": "Grace"
+        "nameD": "Grace"
     },
     {
         "urlParam": "gradle",
-        "name": "Gradle"
+        "nameD": "Gradle"
     },
     {
         "urlParam": "grammatical-framework",
-        "name": "Grammatical Framework"
+        "nameD": "Grammatical Framework"
     },
     {
         "urlParam": "graph-modeling-language",
-        "name": "Graph Modeling Language"
+        "nameD": "Graph Modeling Language"
     },
     {
         "urlParam": "graphql",
-        "name": "GraphQL"
+        "nameD": "GraphQL"
     },
     {
         "urlParam": "graphviz-(dot)",
-        "name": "Graphviz (DOT)"
+        "nameD": "Graphviz (DOT)"
     },
     {
         "urlParam": "groovy",
-        "name": "Groovy"
+        "nameD": "Groovy"
     },
     {
         "urlParam": "groovy-server-pages",
-        "name": "Groovy Server Pages"
+        "nameD": "Groovy Server Pages"
     },
     {
         "urlParam": "hack",
-        "name": "Hack"
+        "nameD": "Hack"
     },
     {
         "urlParam": "haml",
-        "name": "Haml"
+        "nameD": "Haml"
     },
     {
         "urlParam": "handlebars",
-        "name": "Handlebars"
+        "nameD": "Handlebars"
     },
     {
         "urlParam": "harbour",
-        "name": "Harbour"
+        "nameD": "Harbour"
     },
     {
         "urlParam": "haskell",
-        "name": "Haskell"
+        "nameD": "Haskell"
     },
     {
         "urlParam": "haxe",
-        "name": "Haxe"
+        "nameD": "Haxe"
     },
     {
         "urlParam": "hcl",
-        "name": "HCL"
+        "nameD": "HCL"
     },
     {
         "urlParam": "hlsl",
-        "name": "HLSL"
+        "nameD": "HLSL"
     },
     {
         "urlParam": "html",
-        "name": "HTML"
+        "nameD": "HTML"
     },
     {
         "urlParam": "html%2Bdjango",
-        "name": "HTML+Django"
+        "nameD": "HTML+Django"
     },
     {
         "urlParam": "html%2Becr",
-        "name": "HTML+ECR"
+        "nameD": "HTML+ECR"
     },
     {
         "urlParam": "html%2Beex",
-        "name": "HTML+EEX"
+        "nameD": "HTML+EEX"
     },
     {
         "urlParam": "html%2Berb",
-        "name": "HTML+ERB"
+        "nameD": "HTML+ERB"
     },
     {
         "urlParam": "html%2Bphp",
-        "name": "HTML+PHP"
+        "nameD": "HTML+PHP"
     },
     {
         "urlParam": "http",
-        "name": "HTTP"
+        "nameD": "HTTP"
     },
     {
         "urlParam": "hy",
-        "name": "Hy"
+        "nameD": "Hy"
     },
     {
         "urlParam": "hyphy",
-        "name": "HyPhy"
+        "nameD": "HyPhy"
     },
     {
         "urlParam": "idl",
-        "name": "IDL"
+        "nameD": "IDL"
     },
     {
         "urlParam": "idris",
-        "name": "Idris"
+        "nameD": "Idris"
     },
     {
         "urlParam": "igor-pro",
-        "name": "IGOR Pro"
+        "nameD": "IGOR Pro"
     },
     {
         "urlParam": "inform-7",
-        "name": "Inform 7"
+        "nameD": "Inform 7"
     },
     {
         "urlParam": "ini",
-        "name": "INI"
+        "nameD": "INI"
     },
     {
         "urlParam": "inno-setup",
-        "name": "Inno Setup"
+        "nameD": "Inno Setup"
     },
     {
         "urlParam": "io",
-        "name": "Io"
+        "nameD": "Io"
     },
     {
         "urlParam": "ioke",
-        "name": "Ioke"
+        "nameD": "Ioke"
     },
     {
         "urlParam": "irc-log",
-        "name": "IRC log"
+        "nameD": "IRC log"
     },
     {
         "urlParam": "isabelle",
-        "name": "Isabelle"
+        "nameD": "Isabelle"
     },
     {
         "urlParam": "isabelle-root",
-        "name": "Isabelle ROOT"
+        "nameD": "Isabelle ROOT"
     },
     {
         "urlParam": "j",
-        "name": "J"
+        "nameD": "J"
     },
     {
         "urlParam": "jasmin",
-        "name": "Jasmin"
+        "nameD": "Jasmin"
     },
     {
         "urlParam": "java",
-        "name": "Java"
+        "nameD": "Java"
     },
     {
         "urlParam": "java-server-pages",
-        "name": "Java Server Pages"
+        "nameD": "Java Server Pages"
     },
     {
         "urlParam": "javascript",
-        "name": "JavaScript"
+        "nameD": "JavaScript"
     },
     {
         "urlParam": "jflex",
-        "name": "JFlex"
+        "nameD": "JFlex"
     },
     {
         "urlParam": "jison",
-        "name": "Jison"
+        "nameD": "Jison"
     },
     {
         "urlParam": "jison-lex",
-        "name": "Jison Lex"
+        "nameD": "Jison Lex"
     },
     {
         "urlParam": "jolie",
-        "name": "Jolie"
+        "nameD": "Jolie"
     },
     {
         "urlParam": "json",
-        "name": "JSON"
+        "nameD": "JSON"
     },
     {
         "urlParam": "json5",
-        "name": "JSON5"
+        "nameD": "JSON5"
     },
     {
         "urlParam": "jsoniq",
-        "name": "JSONiq"
+        "nameD": "JSONiq"
     },
     {
         "urlParam": "jsonld",
-        "name": "JSONLD"
+        "nameD": "JSONLD"
     },
     {
         "urlParam": "jsx",
-        "name": "JSX"
+        "nameD": "JSX"
     },
     {
         "urlParam": "julia",
-        "name": "Julia"
+        "nameD": "Julia"
     },
     {
         "urlParam": "jupyter-notebook",
-        "name": "Jupyter Notebook"
+        "nameD": "Jupyter Notebook"
     },
     {
         "urlParam": "kicad-layout",
-        "name": "KiCad Layout"
+        "nameD": "KiCad Layout"
     },
     {
         "urlParam": "kicad-legacy-layout",
-        "name": "KiCad Legacy Layout"
+        "nameD": "KiCad Legacy Layout"
     },
     {
         "urlParam": "kicad-schematic",
-        "name": "KiCad Schematic"
+        "nameD": "KiCad Schematic"
     },
     {
         "urlParam": "kit",
-        "name": "Kit"
+        "nameD": "Kit"
     },
     {
         "urlParam": "kotlin",
-        "name": "Kotlin"
+        "nameD": "Kotlin"
     },
     {
         "urlParam": "krl",
-        "name": "KRL"
+        "nameD": "KRL"
     },
     {
         "urlParam": "labview",
-        "name": "LabVIEW"
+        "nameD": "LabVIEW"
     },
     {
         "urlParam": "lasso",
-        "name": "Lasso"
+        "nameD": "Lasso"
     },
     {
         "urlParam": "latte",
-        "name": "Latte"
+        "nameD": "Latte"
     },
     {
         "urlParam": "lean",
-        "name": "Lean"
+        "nameD": "Lean"
     },
     {
         "urlParam": "less",
-        "name": "Less"
+        "nameD": "Less"
     },
     {
         "urlParam": "lex",
-        "name": "Lex"
+        "nameD": "Lex"
     },
     {
         "urlParam": "lfe",
-        "name": "LFE"
+        "nameD": "LFE"
     },
     {
         "urlParam": "lilypond",
-        "name": "LilyPond"
+        "nameD": "LilyPond"
     },
     {
         "urlParam": "limbo",
-        "name": "Limbo"
+        "nameD": "Limbo"
     },
     {
         "urlParam": "linker-script",
-        "name": "Linker Script"
+        "nameD": "Linker Script"
     },
     {
         "urlParam": "linux-kernel-module",
-        "name": "Linux Kernel Module"
+        "nameD": "Linux Kernel Module"
     },
     {
         "urlParam": "liquid",
-        "name": "Liquid"
+        "nameD": "Liquid"
     },
     {
         "urlParam": "literate-agda",
-        "name": "Literate Agda"
+        "nameD": "Literate Agda"
     },
     {
         "urlParam": "literate-coffeescript",
-        "name": "Literate CoffeeScript"
+        "nameD": "Literate CoffeeScript"
     },
     {
         "urlParam": "literate-haskell",
-        "name": "Literate Haskell"
+        "nameD": "Literate Haskell"
     },
     {
         "urlParam": "livescript",
-        "name": "LiveScript"
+        "nameD": "LiveScript"
     },
     {
         "urlParam": "llvm",
-        "name": "LLVM"
+        "nameD": "LLVM"
     },
     {
         "urlParam": "logos",
-        "name": "Logos"
+        "nameD": "Logos"
     },
     {
         "urlParam": "logtalk",
-        "name": "Logtalk"
+        "nameD": "Logtalk"
     },
     {
         "urlParam": "lolcode",
-        "name": "LOLCODE"
+        "nameD": "LOLCODE"
     },
     {
         "urlParam": "lookml",
-        "name": "LookML"
+        "nameD": "LookML"
     },
     {
         "urlParam": "loomscript",
-        "name": "LoomScript"
+        "nameD": "LoomScript"
     },
     {
         "urlParam": "lsl",
-        "name": "LSL"
+        "nameD": "LSL"
     },
     {
         "urlParam": "lua",
-        "name": "Lua"
+        "nameD": "Lua"
     },
     {
         "urlParam": "m",
-        "name": "M"
+        "nameD": "M"
     },
     {
         "urlParam": "m4",
-        "name": "M4"
+        "nameD": "M4"
     },
     {
         "urlParam": "m4sugar",
-        "name": "M4Sugar"
+        "nameD": "M4Sugar"
     },
     {
         "urlParam": "makefile",
-        "name": "Makefile"
+        "nameD": "Makefile"
     },
     {
         "urlParam": "mako",
-        "name": "Mako"
+        "nameD": "Mako"
     },
     {
         "urlParam": "markdown",
-        "name": "Markdown"
+        "nameD": "Markdown"
     },
     {
         "urlParam": "marko",
-        "name": "Marko"
+        "nameD": "Marko"
     },
     {
         "urlParam": "mask",
-        "name": "Mask"
+        "nameD": "Mask"
     },
     {
         "urlParam": "mathematica",
-        "name": "Mathematica"
+        "nameD": "Mathematica"
     },
     {
         "urlParam": "matlab",
-        "name": "Matlab"
+        "nameD": "Matlab"
     },
     {
         "urlParam": "maven-pom",
-        "name": "Maven POM"
+        "nameD": "Maven POM"
     },
     {
         "urlParam": "max",
-        "name": "Max"
+        "nameD": "Max"
     },
     {
         "urlParam": "maxscript",
-        "name": "MAXScript"
+        "nameD": "MAXScript"
     },
     {
         "urlParam": "mediawiki",
-        "name": "MediaWiki"
+        "nameD": "MediaWiki"
     },
     {
         "urlParam": "mercury",
-        "name": "Mercury"
+        "nameD": "Mercury"
     },
     {
         "urlParam": "meson",
-        "name": "Meson"
+        "nameD": "Meson"
     },
     {
         "urlParam": "metal",
-        "name": "Metal"
+        "nameD": "Metal"
     },
     {
         "urlParam": "minid",
-        "name": "MiniD"
+        "nameD": "MiniD"
     },
     {
         "urlParam": "mirah",
-        "name": "Mirah"
+        "nameD": "Mirah"
     },
     {
         "urlParam": "modelica",
-        "name": "Modelica"
+        "nameD": "Modelica"
     },
     {
         "urlParam": "modula-2",
-        "name": "Modula-2"
+        "nameD": "Modula-2"
     },
     {
         "urlParam": "module-management-system",
-        "name": "Module Management System"
+        "nameD": "Module Management System"
     },
     {
         "urlParam": "monkey",
-        "name": "Monkey"
+        "nameD": "Monkey"
     },
     {
         "urlParam": "moocode",
-        "name": "Moocode"
+        "nameD": "Moocode"
     },
     {
         "urlParam": "moonscript",
-        "name": "MoonScript"
+        "nameD": "MoonScript"
     },
     {
         "urlParam": "mql4",
-        "name": "MQL4"
+        "nameD": "MQL4"
     },
     {
         "urlParam": "mql5",
-        "name": "MQL5"
+        "nameD": "MQL5"
     },
     {
         "urlParam": "mtml",
-        "name": "MTML"
+        "nameD": "MTML"
     },
     {
         "urlParam": "muf",
-        "name": "MUF"
+        "nameD": "MUF"
     },
     {
         "urlParam": "mupad",
-        "name": "mupad"
+        "nameD": "mupad"
     },
     {
         "urlParam": "myghty",
-        "name": "Myghty"
+        "nameD": "Myghty"
     },
     {
         "urlParam": "ncl",
-        "name": "NCL"
+        "nameD": "NCL"
     },
     {
         "urlParam": "nearley",
-        "name": "Nearley"
+        "nameD": "Nearley"
     },
     {
         "urlParam": "nemerle",
-        "name": "Nemerle"
+        "nameD": "Nemerle"
     },
     {
         "urlParam": "nesc",
-        "name": "nesC"
+        "nameD": "nesC"
     },
     {
         "urlParam": "netlinx",
-        "name": "NetLinx"
+        "nameD": "NetLinx"
     },
     {
         "urlParam": "netlinx%2Berb",
-        "name": "NetLinx+ERB"
+        "nameD": "NetLinx+ERB"
     },
     {
         "urlParam": "netlogo",
-        "name": "NetLogo"
+        "nameD": "NetLogo"
     },
     {
         "urlParam": "newlisp",
-        "name": "NewLisp"
+        "nameD": "NewLisp"
     },
     {
         "urlParam": "nextflow",
-        "name": "Nextflow"
+        "nameD": "Nextflow"
     },
     {
         "urlParam": "nginx",
-        "name": "Nginx"
+        "nameD": "Nginx"
     },
     {
         "urlParam": "nim",
-        "name": "Nim"
+        "nameD": "Nim"
     },
     {
         "urlParam": "ninja",
-        "name": "Ninja"
+        "nameD": "Ninja"
     },
     {
         "urlParam": "nit",
-        "name": "Nit"
+        "nameD": "Nit"
     },
     {
         "urlParam": "nix",
-        "name": "Nix"
+        "nameD": "Nix"
     },
     {
         "urlParam": "nl",
-        "name": "NL"
+        "nameD": "NL"
     },
     {
         "urlParam": "nsis",
-        "name": "NSIS"
+        "nameD": "NSIS"
     },
     {
         "urlParam": "nu",
-        "name": "Nu"
+        "nameD": "Nu"
     },
     {
         "urlParam": "numpy",
-        "name": "NumPy"
+        "nameD": "NumPy"
     },
     {
         "urlParam": "objdump",
-        "name": "ObjDump"
+        "nameD": "ObjDump"
     },
     {
         "urlParam": "objective-c",
-        "name": "Objective-C"
+        "nameD": "Objective-C"
     },
     {
         "urlParam": "objective-c%2B%2B",
-        "name": "Objective-C++"
+        "nameD": "Objective-C++"
     },
     {
         "urlParam": "objective-j",
-        "name": "Objective-J"
+        "nameD": "Objective-J"
     },
     {
         "urlParam": "ocaml",
-        "name": "OCaml"
+        "nameD": "OCaml"
     },
     {
         "urlParam": "omgrofl",
-        "name": "Omgrofl"
+        "nameD": "Omgrofl"
     },
     {
         "urlParam": "ooc",
-        "name": "ooc"
+        "nameD": "ooc"
     },
     {
         "urlParam": "opa",
-        "name": "Opa"
+        "nameD": "Opa"
     },
     {
         "urlParam": "opal",
-        "name": "Opal"
+        "nameD": "Opal"
     },
     {
         "urlParam": "opencl",
-        "name": "OpenCL"
+        "nameD": "OpenCL"
     },
     {
         "urlParam": "openedge-abl",
-        "name": "OpenEdge ABL"
+        "nameD": "OpenEdge ABL"
     },
     {
         "urlParam": "openrc-runscript",
-        "name": "OpenRC runscript"
+        "nameD": "OpenRC runscript"
     },
     {
         "urlParam": "openscad",
-        "name": "OpenSCAD"
+        "nameD": "OpenSCAD"
     },
     {
         "urlParam": "opentype-feature-file",
-        "name": "OpenType Feature File"
+        "nameD": "OpenType Feature File"
     },
     {
         "urlParam": "org",
-        "name": "Org"
+        "nameD": "Org"
     },
     {
         "urlParam": "ox",
-        "name": "Ox"
+        "nameD": "Ox"
     },
     {
         "urlParam": "oxygene",
-        "name": "Oxygene"
+        "nameD": "Oxygene"
     },
     {
         "urlParam": "oz",
-        "name": "Oz"
+        "nameD": "Oz"
     },
     {
         "urlParam": "p4",
-        "name": "P4"
+        "nameD": "P4"
     },
     {
         "urlParam": "pan",
-        "name": "Pan"
+        "nameD": "Pan"
     },
     {
         "urlParam": "papyrus",
-        "name": "Papyrus"
+        "nameD": "Papyrus"
     },
     {
         "urlParam": "parrot",
-        "name": "Parrot"
+        "nameD": "Parrot"
     },
     {
         "urlParam": "parrot-assembly",
-        "name": "Parrot Assembly"
+        "nameD": "Parrot Assembly"
     },
     {
         "urlParam": "parrot-internal-representation",
-        "name": "Parrot Internal Representation"
+        "nameD": "Parrot Internal Representation"
     },
     {
         "urlParam": "pascal",
-        "name": "Pascal"
+        "nameD": "Pascal"
     },
     {
         "urlParam": "pawn",
-        "name": "PAWN"
+        "nameD": "PAWN"
     },
     {
         "urlParam": "pep8",
-        "name": "Pep8"
+        "nameD": "Pep8"
     },
     {
         "urlParam": "perl",
-        "name": "Perl"
+        "nameD": "Perl"
     },
     {
         "urlParam": "perl-6",
-        "name": "Perl 6"
+        "nameD": "Perl 6"
     },
     {
         "urlParam": "php",
-        "name": "PHP"
+        "nameD": "PHP"
     },
     {
         "urlParam": "pic",
-        "name": "Pic"
+        "nameD": "Pic"
     },
     {
         "urlParam": "pickle",
-        "name": "Pickle"
+        "nameD": "Pickle"
     },
     {
         "urlParam": "picolisp",
-        "name": "PicoLisp"
+        "nameD": "PicoLisp"
     },
     {
         "urlParam": "piglatin",
-        "name": "PigLatin"
+        "nameD": "PigLatin"
     },
     {
         "urlParam": "pike",
-        "name": "Pike"
+        "nameD": "Pike"
     },
     {
         "urlParam": "plpgsql",
-        "name": "PLpgSQL"
+        "nameD": "PLpgSQL"
     },
     {
         "urlParam": "plsql",
-        "name": "PLSQL"
+        "nameD": "PLSQL"
     },
     {
         "urlParam": "pod",
-        "name": "Pod"
+        "nameD": "Pod"
     },
     {
         "urlParam": "pogoscript",
-        "name": "PogoScript"
+        "nameD": "PogoScript"
     },
     {
         "urlParam": "pony",
-        "name": "Pony"
+        "nameD": "Pony"
     },
     {
         "urlParam": "postcss",
-        "name": "PostCSS"
+        "nameD": "PostCSS"
     },
     {
         "urlParam": "postscript",
-        "name": "PostScript"
+        "nameD": "PostScript"
     },
     {
         "urlParam": "pov-ray-sdl",
-        "name": "POV-Ray SDL"
+        "nameD": "POV-Ray SDL"
     },
     {
         "urlParam": "powerbuilder",
-        "name": "PowerBuilder"
+        "nameD": "PowerBuilder"
     },
     {
         "urlParam": "powershell",
-        "name": "PowerShell"
+        "nameD": "PowerShell"
     },
     {
         "urlParam": "processing",
-        "name": "Processing"
+        "nameD": "Processing"
     },
     {
         "urlParam": "prolog",
-        "name": "Prolog"
+        "nameD": "Prolog"
     },
     {
         "urlParam": "propeller-spin",
-        "name": "Propeller Spin"
+        "nameD": "Propeller Spin"
     },
     {
         "urlParam": "protocol-buffer",
-        "name": "Protocol Buffer"
+        "nameD": "Protocol Buffer"
     },
     {
         "urlParam": "public-key",
-        "name": "Public Key"
+        "nameD": "Public Key"
     },
     {
         "urlParam": "pug",
-        "name": "Pug"
+        "nameD": "Pug"
     },
     {
         "urlParam": "puppet",
-        "name": "Puppet"
+        "nameD": "Puppet"
     },
     {
         "urlParam": "pure-data",
-        "name": "Pure Data"
+        "nameD": "Pure Data"
     },
     {
         "urlParam": "purebasic",
-        "name": "PureBasic"
+        "nameD": "PureBasic"
     },
     {
         "urlParam": "purescript",
-        "name": "PureScript"
+        "nameD": "PureScript"
     },
     {
         "urlParam": "python",
-        "name": "Python"
+        "nameD": "Python"
     },
     {
         "urlParam": "python-console",
-        "name": "Python console"
+        "nameD": "Python console"
     },
     {
         "urlParam": "python-traceback",
-        "name": "Python traceback"
+        "nameD": "Python traceback"
     },
     {
         "urlParam": "qmake",
-        "name": "QMake"
+        "nameD": "QMake"
     },
     {
         "urlParam": "qml",
-        "name": "QML"
+        "nameD": "QML"
     },
     {
         "urlParam": "r",
-        "name": "R"
+        "nameD": "R"
     },
     {
         "urlParam": "racket",
-        "name": "Racket"
+        "nameD": "Racket"
     },
     {
         "urlParam": "ragel",
-        "name": "Ragel"
+        "nameD": "Ragel"
     },
     {
         "urlParam": "raml",
-        "name": "RAML"
+        "nameD": "RAML"
     },
     {
         "urlParam": "rascal",
-        "name": "Rascal"
+        "nameD": "Rascal"
     },
     {
         "urlParam": "raw-token-data",
-        "name": "Raw token data"
+        "nameD": "Raw token data"
     },
     {
         "urlParam": "rdoc",
-        "name": "RDoc"
+        "nameD": "RDoc"
     },
     {
         "urlParam": "realbasic",
-        "name": "REALbasic"
+        "nameD": "REALbasic"
     },
     {
         "urlParam": "reason",
-        "name": "Reason"
+        "nameD": "Reason"
     },
     {
         "urlParam": "rebol",
-        "name": "Rebol"
+        "nameD": "Rebol"
     },
     {
         "urlParam": "red",
-        "name": "Red"
+        "nameD": "Red"
     },
     {
         "urlParam": "redcode",
-        "name": "Redcode"
+        "nameD": "Redcode"
     },
     {
         "urlParam": "regular-expression",
-        "name": "Regular Expression"
+        "nameD": "Regular Expression"
     },
     {
         "urlParam": "ren'py",
-        "name": "Ren'Py"
+        "nameD": "Ren'Py"
     },
     {
         "urlParam": "renderscript",
-        "name": "RenderScript"
+        "nameD": "RenderScript"
     },
     {
         "urlParam": "restructuredtext",
-        "name": "reStructuredText"
+        "nameD": "reStructuredText"
     },
     {
         "urlParam": "rexx",
-        "name": "REXX"
+        "nameD": "REXX"
     },
     {
         "urlParam": "rhtml",
-        "name": "RHTML"
+        "nameD": "RHTML"
     },
     {
         "urlParam": "ring",
-        "name": "Ring"
+        "nameD": "Ring"
     },
     {
         "urlParam": "rmarkdown",
-        "name": "RMarkdown"
+        "nameD": "RMarkdown"
     },
     {
         "urlParam": "robotframework",
-        "name": "RobotFramework"
+        "nameD": "RobotFramework"
     },
     {
         "urlParam": "roff",
-        "name": "Roff"
+        "nameD": "Roff"
     },
     {
         "urlParam": "rouge",
-        "name": "Rouge"
+        "nameD": "Rouge"
     },
     {
         "urlParam": "rpc",
-        "name": "RPC"
+        "nameD": "RPC"
     },
     {
         "urlParam": "rpm-spec",
-        "name": "RPM Spec"
+        "nameD": "RPM Spec"
     },
     {
         "urlParam": "ruby",
-        "name": "Ruby"
+        "nameD": "Ruby"
     },
     {
         "urlParam": "runoff",
-        "name": "RUNOFF"
+        "nameD": "RUNOFF"
     },
     {
         "urlParam": "rust",
-        "name": "Rust"
+        "nameD": "Rust"
     },
     {
         "urlParam": "sage",
-        "name": "Sage"
+        "nameD": "Sage"
     },
     {
         "urlParam": "saltstack",
-        "name": "SaltStack"
+        "nameD": "SaltStack"
     },
     {
         "urlParam": "sas",
-        "name": "SAS"
+        "nameD": "SAS"
     },
     {
         "urlParam": "sass",
-        "name": "Sass"
+        "nameD": "Sass"
     },
     {
         "urlParam": "scala",
-        "name": "Scala"
+        "nameD": "Scala"
     },
     {
         "urlParam": "scaml",
-        "name": "Scaml"
+        "nameD": "Scaml"
     },
     {
         "urlParam": "scheme",
-        "name": "Scheme"
+        "nameD": "Scheme"
     },
     {
         "urlParam": "scilab",
-        "name": "Scilab"
+        "nameD": "Scilab"
     },
     {
         "urlParam": "scss",
-        "name": "SCSS"
+        "nameD": "SCSS"
     },
     {
         "urlParam": "sed",
-        "name": "sed"
+        "nameD": "sed"
     },
     {
         "urlParam": "self",
-        "name": "Self"
+        "nameD": "Self"
     },
     {
         "urlParam": "shaderlab",
-        "name": "ShaderLab"
+        "nameD": "ShaderLab"
     },
     {
         "urlParam": "shell",
-        "name": "Shell"
+        "nameD": "Shell"
     },
     {
         "urlParam": "shellsession",
-        "name": "ShellSession"
+        "nameD": "ShellSession"
     },
     {
         "urlParam": "shen",
-        "name": "Shen"
+        "nameD": "Shen"
     },
     {
         "urlParam": "slash",
-        "name": "Slash"
+        "nameD": "Slash"
     },
     {
         "urlParam": "slim",
-        "name": "Slim"
+        "nameD": "Slim"
     },
     {
         "urlParam": "smali",
-        "name": "Smali"
+        "nameD": "Smali"
     },
     {
         "urlParam": "smalltalk",
-        "name": "Smalltalk"
+        "nameD": "Smalltalk"
     },
     {
         "urlParam": "smarty",
-        "name": "Smarty"
+        "nameD": "Smarty"
     },
     {
         "urlParam": "smt",
-        "name": "SMT"
+        "nameD": "SMT"
     },
     {
         "urlParam": "solidity",
-        "name": "Solidity"
+        "nameD": "Solidity"
     },
     {
         "urlParam": "sourcepawn",
-        "name": "SourcePawn"
+        "nameD": "SourcePawn"
     },
     {
         "urlParam": "sparql",
-        "name": "SPARQL"
+        "nameD": "SPARQL"
     },
     {
         "urlParam": "spline-font-database",
-        "name": "Spline Font Database"
+        "nameD": "Spline Font Database"
     },
     {
         "urlParam": "sqf",
-        "name": "SQF"
+        "nameD": "SQF"
     },
     {
         "urlParam": "sql",
-        "name": "SQL"
+        "nameD": "SQL"
     },
     {
         "urlParam": "sqlpl",
-        "name": "SQLPL"
+        "nameD": "SQLPL"
     },
     {
         "urlParam": "squirrel",
-        "name": "Squirrel"
+        "nameD": "Squirrel"
     },
     {
         "urlParam": "srecode-template",
-        "name": "SRecode Template"
+        "nameD": "SRecode Template"
     },
     {
         "urlParam": "stan",
-        "name": "Stan"
+        "nameD": "Stan"
     },
     {
         "urlParam": "standard-ml",
-        "name": "Standard ML"
+        "nameD": "Standard ML"
     },
     {
         "urlParam": "stata",
-        "name": "Stata"
+        "nameD": "Stata"
     },
     {
         "urlParam": "ston",
-        "name": "STON"
+        "nameD": "STON"
     },
     {
         "urlParam": "stylus",
-        "name": "Stylus"
+        "nameD": "Stylus"
     },
     {
         "urlParam": "sublime-text-config",
-        "name": "Sublime Text Config"
+        "nameD": "Sublime Text Config"
     },
     {
         "urlParam": "subrip-text",
-        "name": "SubRip Text"
+        "nameD": "SubRip Text"
     },
     {
         "urlParam": "sugarss",
-        "name": "SugarSS"
+        "nameD": "SugarSS"
     },
     {
         "urlParam": "supercollider",
-        "name": "SuperCollider"
+        "nameD": "SuperCollider"
     },
     {
         "urlParam": "svg",
-        "name": "SVG"
+        "nameD": "SVG"
     },
     {
         "urlParam": "swift",
-        "name": "Swift"
+        "nameD": "Swift"
     },
     {
         "urlParam": "systemverilog",
-        "name": "SystemVerilog"
+        "nameD": "SystemVerilog"
     },
     {
         "urlParam": "tcl",
-        "name": "Tcl"
+        "nameD": "Tcl"
     },
     {
         "urlParam": "tcsh",
-        "name": "Tcsh"
+        "nameD": "Tcsh"
     },
     {
         "urlParam": "tea",
-        "name": "Tea"
+        "nameD": "Tea"
     },
     {
         "urlParam": "terra",
-        "name": "Terra"
+        "nameD": "Terra"
     },
     {
         "urlParam": "tex",
-        "name": "TeX"
+        "nameD": "TeX"
     },
     {
         "urlParam": "text",
-        "name": "Text"
+        "nameD": "Text"
     },
     {
         "urlParam": "textile",
-        "name": "Textile"
+        "nameD": "Textile"
     },
     {
         "urlParam": "thrift",
-        "name": "Thrift"
+        "nameD": "Thrift"
     },
     {
         "urlParam": "ti-program",
-        "name": "TI Program"
+        "nameD": "TI Program"
     },
     {
         "urlParam": "tla",
-        "name": "TLA"
+        "nameD": "TLA"
     },
     {
         "urlParam": "toml",
-        "name": "TOML"
+        "nameD": "TOML"
     },
     {
         "urlParam": "turing",
-        "name": "Turing"
+        "nameD": "Turing"
     },
     {
         "urlParam": "turtle",
-        "name": "Turtle"
+        "nameD": "Turtle"
     },
     {
         "urlParam": "twig",
-        "name": "Twig"
+        "nameD": "Twig"
     },
     {
         "urlParam": "txl",
-        "name": "TXL"
+        "nameD": "TXL"
     },
     {
         "urlParam": "type-language",
-        "name": "Type Language"
+        "nameD": "Type Language"
     },
     {
         "urlParam": "typescript",
-        "name": "TypeScript"
+        "nameD": "TypeScript"
     },
     {
         "urlParam": "unified-parallel-c",
-        "name": "Unified Parallel C"
+        "nameD": "Unified Parallel C"
     },
     {
         "urlParam": "unity3d-asset",
-        "name": "Unity3D Asset"
+        "nameD": "Unity3D Asset"
     },
     {
         "urlParam": "unix-assembly",
-        "name": "Unix Assembly"
+        "nameD": "Unix Assembly"
     },
     {
         "urlParam": "uno",
-        "name": "Uno"
+        "nameD": "Uno"
     },
     {
         "urlParam": "unrealscript",
-        "name": "UnrealScript"
+        "nameD": "UnrealScript"
     },
     {
         "urlParam": "urweb",
-        "name": "UrWeb"
+        "nameD": "UrWeb"
     },
     {
         "urlParam": "vala",
-        "name": "Vala"
+        "nameD": "Vala"
     },
     {
         "urlParam": "vcl",
-        "name": "VCL"
+        "nameD": "VCL"
     },
     {
         "urlParam": "verilog",
-        "name": "Verilog"
+        "nameD": "Verilog"
     },
     {
         "urlParam": "vhdl",
-        "name": "VHDL"
+        "nameD": "VHDL"
     },
     {
         "urlParam": "vim-script",
-        "name": "Vim script"
+        "nameD": "Vim script"
     },
     {
         "urlParam": "visual-basic",
-        "name": "Visual Basic"
+        "nameD": "Visual Basic"
     },
     {
         "urlParam": "volt",
-        "name": "Volt"
+        "nameD": "Volt"
     },
     {
         "urlParam": "vue",
-        "name": "Vue"
+        "nameD": "Vue"
     },
     {
         "urlParam": "wavefront-material",
-        "name": "Wavefront Material"
+        "nameD": "Wavefront Material"
     },
     {
         "urlParam": "wavefront-object",
-        "name": "Wavefront Object"
+        "nameD": "Wavefront Object"
     },
     {
         "urlParam": "wdl",
-        "name": "wdl"
+        "nameD": "wdl"
     },
     {
         "urlParam": "web-ontology-language",
-        "name": "Web Ontology Language"
+        "nameD": "Web Ontology Language"
     },
     {
         "urlParam": "webassembly",
-        "name": "WebAssembly"
+        "nameD": "WebAssembly"
     },
     {
         "urlParam": "webidl",
-        "name": "WebIDL"
+        "nameD": "WebIDL"
     },
     {
         "urlParam": "wisp",
-        "name": "wisp"
+        "nameD": "wisp"
     },
     {
         "urlParam": "world-of-warcraft-addon-data",
-        "name": "World of Warcraft Addon Data"
+        "nameD": "World of Warcraft Addon Data"
     },
     {
         "urlParam": "x10",
-        "name": "X10"
+        "nameD": "X10"
     },
     {
         "urlParam": "xbase",
-        "name": "xBase"
+        "nameD": "xBase"
     },
     {
         "urlParam": "xc",
-        "name": "XC"
+        "nameD": "XC"
     },
     {
         "urlParam": "xcompose",
-        "name": "XCompose"
+        "nameD": "XCompose"
     },
     {
         "urlParam": "xml",
-        "name": "XML"
+        "nameD": "XML"
     },
     {
         "urlParam": "xojo",
-        "name": "Xojo"
+        "nameD": "Xojo"
     },
     {
         "urlParam": "xpages",
-        "name": "XPages"
+        "nameD": "XPages"
     },
     {
         "urlParam": "xpm",
-        "name": "XPM"
+        "nameD": "XPM"
     },
     {
         "urlParam": "xproc",
-        "name": "XProc"
+        "nameD": "XProc"
     },
     {
         "urlParam": "xquery",
-        "name": "XQuery"
+        "nameD": "XQuery"
     },
     {
         "urlParam": "xs",
-        "name": "XS"
+        "nameD": "XS"
     },
     {
         "urlParam": "xslt",
-        "name": "XSLT"
+        "nameD": "XSLT"
     },
     {
         "urlParam": "xtend",
-        "name": "Xtend"
+        "nameD": "Xtend"
     },
     {
         "urlParam": "yacc",
-        "name": "Yacc"
+        "nameD": "Yacc"
     },
     {
         "urlParam": "yaml",
-        "name": "YAML"
+        "nameD": "YAML"
     },
     {
         "urlParam": "yang",
-        "name": "YANG"
+        "nameD": "YANG"
     },
     {
         "urlParam": "yara",
-        "name": "YARA"
+        "nameD": "YARA"
     },
     {
         "urlParam": "zephir",
-        "name": "Zephir"
+        "nameD": "Zephir"
     },
     {
         "urlParam": "zimpl",
-        "name": "Zimpl"
+        "nameD": "Zimpl"
     }
 ];
 
 // $('#lang-drop').empty();
 $.each(langs, function (i, l) {
-    $('#lang-drop').append($('<option></option>').val(l.urlParam).html(l.name));
+    $('#lang-drop').append($('<option></option>').val(l.urlParam).html(l.nameD));
 });
 // **********
 
@@ -1984,156 +1984,84 @@ function getTrending() {
         url: ajaxURL,
         success: function (response) {
 
+            console.log(response);
 
-            //console.log(response);
-
-            var trendingCol1 = document.createElement('div');
-            trendingCol1.setAttribute('class', 'trend-cont');
-
-            var trendingCol2 = document.createElement('div');
-            trendingCol2.setAttribute('class', 'trend-cont');
-
-            var trendingCol3 = document.createElement('div');
-            trendingCol3.setAttribute('class', 'trend-cont');
-
-            // Variable for keeping track of which column to place content, see below for logic.
-            let columnCounter = 1;
+            var trendingCol = document.createElement('div');
+            trendingCol.setAttribute('class', 'trend-cont');
 
             Object.keys(response).forEach(key => {
-
-                // console.log(key);
 
                 switch (apiType) {
                     case 'repositories':
 
                         let authorR = JSON.stringify(response[key].author).replace(/['"]+/g, '');
                         let avatarR = JSON.stringify(response[key].avatar);
-                        let repoR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
-                        let infoR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
+                        let urlR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
+                        let descriptionR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
                         let starsR = JSON.stringify(response[key].stars);
                         let forksR = JSON.stringify(response[key].forks).replace(/['"]+/g, '');
                         let langR;
                         let langColorR;
 
-                        // Check is language object exists.
+                        // Check if language & languageColor exists, act accordingly.
                         if (response[key].language) {
                             langR = JSON.stringify(response[key].language).replace(/['"]+/g, '');
+                            langColorR = JSON.stringify(response[key].languageColor).replace(/['"]+/g, '');
                         } else {
                             langR = "Unknown";
                             langColorR = "#f25f4c"
                         }
 
-                        // Check is languageColor object exists.
-                        if (response[key].languageColor) {
-                            langColorR = JSON.stringify(response[key].languageColor).replace(/['"]+/g, '');
-                        }
-
-                        // Check is description object is empty.
+                        // Check if description is empty, act accordingly.
                         if (response[key].description === "") {
-                            infoR = "No Description."
+                            descriptionR = "No Description."
                         }
 
-                        if (columnCounter === 1 && parseInt(key) < 24) {
-                            trendingCol1.insertAdjacentHTML("beforeend",
+                        if (parseInt(key) < 25) {
+                            trendingCol.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
+                                    <p style="float: right;">${++key}</p>
                                     <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
-                                    <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
-                                    <p class="trending-cards text-limit" title="${infoR}">${infoR}</p>
+                                    <a class="trending-cards text-limit" href="${urlR}" target="_blank">${urlR}</a>
+                                    <p class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
                                     <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
                                     <p class="trending-cards"><img src="../images/star.svg" width="16" alt="Star icon."> ${starsR}</p>
                                     <p class="trending-cards"><img src="../images/fork.svg" width="16;" alt="Fork icon."> ${forksR}</p>
                                 </div>`);
-                        }
-
-                        if (columnCounter === 2 && parseInt(key) < 24) {
-                            trendingCol2.insertAdjacentHTML("beforeend",
-                                `<div class="content trend-divs rounded">
-                                <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards text-limit">${authorR}</h4>
-                                    <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
-                                    <p class="trending-cards text-limit" title="${infoR}">${infoR}</p>
-                                    <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
-                                    <p class="trending-cards"><img src="../images/star.svg" width="16" alt="Star icon."> ${starsR}</p>
-                                    <p class="trending-cards"><img src="../images/fork.svg" width="16;" alt="Fork icon."> ${forksR}</p>
-                                </div>`);
-                        }
-
-                        if (columnCounter === 3 && parseInt(key) < 24) {
-                            trendingCol3.insertAdjacentHTML("beforeend",
-                                `<div class="content trend-divs rounded">
-                                <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards">${authorR}</h4>
-                                    <a class="trending-cards text-limit" href="${repoR}" target="_blank">${repoR}</a>
-                                    <p class="trending-cards text-limit" title="${infoR}">${infoR}</p>
-                                    <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
-                                    <p class="trending-cards"><img src="../images/star.svg" width="16" alt="Star icon."> ${starsR}</p>
-                                    <p class="trending-cards"><img src="../images/fork.svg" width="16;" alt="Fork icon."> ${forksR}</p>
-                                </div>`);
-                        }
-
-                        // Logic for counter which column to inject content accordingly.
-                        columnCounter++;
-
-                        if (columnCounter === 4) {
-                            columnCounter = 1;
                         }
 
                         break;
                     case 'developers':
-                        let userName = JSON.stringify(response[key].username).replace(/['"]+/g, '');
-                        let name = JSON.stringify(response[key].name).replace(/['"]+/g, '');
+                        let usernameD = JSON.stringify(response[key].username).replace(/['"]+/g, '');
+                        let nameD = JSON.stringify(response[key].name).replace(/['"]+/g, '');
                         // let type = JSON.stringify(response.data[key].type).replace(/['"]+/g, '');
-                        let userURL = JSON.stringify(response[key].url).replace(/['"]+/g, '');
-                        let avatar = JSON.stringify(response[key].avatar);
-                        let repoName = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
-                        let repoInfo = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
-                        let repoURL = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
+                        let urlD = JSON.stringify(response[key].url).replace(/['"]+/g, '');
+                        let avatarD = JSON.stringify(response[key].avatar);
+                        let repoNameD = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
+                        let repoDescriptionD = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
+                        let repoUrlD = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
 
                         let stars = JSON.stringify(response[key].stars);
 
-                        if (columnCounter === 1 && parseInt(key) < 24) {
-                            trendingCol1.insertAdjacentHTML("beforeend",
+                        // Check if repo.name is empty, act accordingly.
+                        if (response[key].repo.name === "") {
+                            repoNameD = "No repo name"
+                        }
+
+                        if (parseInt(key) < 24) {
+                            trendingCol.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards text-limit">${name}</h4>
-                                    <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
-                                    <h4 class="trending-cards text-limit">${repoName}</h4>
-                                    <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
-                                    <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
+                                    <p style="float: right;">${++key}</p>
+                                    <img src=${avatarD} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
+                                    <h4 class="trending-cards text-limit">${nameD}</h4>
+                                    <a class="trending-cards" href="${urlD}" target="_blank">${usernameD}</a>
+                                    <h4 class="trending-cards text-limit">${repoNameD}</h4>
+                                    <p class="trending-cards text-limit" title="${repoDescriptionD}">${repoDescriptionD}</p>
+                                    <a class="trending-cards text-limit" href="${repoUrlD}" target="_blank">Link</a>
                                 </div>`);
                         }
 
-                        if (columnCounter === 2 && parseInt(key) < 24) {
-                            trendingCol2.insertAdjacentHTML("beforeend",
-                                `<div class="content trend-divs rounded">
-                                <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards text-limit">${name}</h4>
-                                    <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
-                                    <h4 class="trending-cards text-limit">${repoName}</h4>
-                                    <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
-                                    <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
-                                </div>`);
-                        }
-
-                        if (columnCounter === 3 && parseInt(key) < 24) {
-                            trendingCol3.insertAdjacentHTML("beforeend",
-                                `<div class="content trend-divs rounded">
-                                <img src=${avatar} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards text-limit">${name}</h4>
-                                    <a class="trending-cards" href="${userURL}" target="_blank">${userName}</a>
-                                    <h4 class="trending-cards text-limit">${repoName}</h4>
-                                    <p class="trending-cards text-limit" title="${repoInfo}">${repoInfo}</p>
-                                    <a class="trending-cards text-limit" href="${repoURL}" target="_blank">Link</a>
-                                </div>`);
-                        }
-
-                        // Logic for counter which column to inject content accordingly.
-                        columnCounter++;
-
-                        if (columnCounter === 4) {
-                            columnCounter = 1;
-                        }
                         break;
                     default:
                 };
@@ -2141,13 +2069,9 @@ function getTrending() {
             });
 
             if (response.length === 0) {
-                $('#sandbox-1').empty();
-                $('#sandbox-2').html(`<div class="text-center"><p class="mt-5 mb-0" style="font-weight: bold">&#128577 No repos/devs found.</p>`);
-                $('#sandbox-3').empty();
+                $('#sandbox').html(`<div class="text-center"><p class="mt-5 mb-0" style="font-weight: bold">&#128577 No repos/devs found.</p>`);
             } else {
-                $('#sandbox-1').html(trendingCol1);
-                $('#sandbox-2').html(trendingCol2);
-                $('#sandbox-3').html(trendingCol3);
+                $('#sandbox').html(trendingCol);
             }
 
         },

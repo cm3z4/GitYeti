@@ -29,7 +29,6 @@ a {
 
 #since-drop,
 #type-drop,
-#spoke-drop,
 #lang-drop {
   background-color: #202225 !important;
   color: var(--dark-paragraph) !important;
@@ -41,10 +40,13 @@ a {
 }
 
 .trend-divs {
+  width: 325px;
+  display: inline-block;
+  text-align: left;
   background-color: #202225;
   color: #94a1b2;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1rem 1rem;
   border-radius: .1rem;
   -webkit-box-shadow: 5px 5px #2f3136;
   box-shadow: 5px 5px #2f3136;
@@ -65,4 +67,15 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+
+  .trend-divs {
+    width: 94%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
 }
