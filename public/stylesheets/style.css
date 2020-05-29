@@ -10,7 +10,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--dark-paragraph);
-  background-color: var(--dark-secondary);
+  background-color: var(--dark-primary);
 }
 
 a {
@@ -67,6 +67,11 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.rank {
+  color: #e53170;
+  font-weight: bold;
 }
 
 /* MOBILE */

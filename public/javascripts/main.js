@@ -2020,7 +2020,7 @@ function getTrending() {
                         if (parseInt(key) < 25) {
                             trendingCol.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <p style="float: right;">${++key}</p>
+                                    <p class="rank" style="float: right;">${++key}</p>
                                     <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
                                     <a class="trending-cards text-limit" href="${urlR}" target="_blank">${urlR}</a>
