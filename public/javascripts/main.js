@@ -2,6 +2,19 @@ console.log("main.js is working.");
 
 // This function uses the https://github.com/huchenme/github-trending-api repo, see link for docs.
 
+// Remove text-limit class if on a mobile device.
+$(window).resize(function () {
+    if ($(window).width() <= 768) {
+        $('p').removeClass('text-limit');
+    }
+});
+
+$(window).resize(function () {
+    if ($(window).width() >= 768) {
+        $('p').addClass('text-limit');
+    }
+});
+
 // Fill #lang-drop with langs data.
 const langs = [{
         "urlParam": "1c-enterprise",
@@ -1911,12 +1924,11 @@ function getTrending() {
 
     switch (type) {
         case 'repositories':
-            // console.log("Case: repositories");
+
             apiType = "repositories";
 
             switch (lang) {
                 case 'all':
-                    // console.log("Case: daily");
                     apiLang = encodeURIComponent("?");
                     break;
                 default:
@@ -1925,28 +1937,25 @@ function getTrending() {
 
             switch (since) {
                 case 'daily':
-                    // console.log("Case: daily");
                     apiSince = "since=daily"
                     break;
                 case 'weekly':
                     apiSince = "since=weekly"
-                    //console.log(apiSince);
                     break;
                 case 'monthly':
                     apiSince = "since=monthly"
-                    //console.log(apiSince);
                     break;
                 default: // Do nothing.
             };
 
             break;
+
         case 'developers':
-            console.log("Case: developers");
+
             apiType = "developers";
 
             switch (lang) {
                 case 'all':
-                    // console.log("Case: daily");
                     apiLang = encodeURIComponent("?");
                     break;
                 default:
@@ -1955,21 +1964,19 @@ function getTrending() {
 
             switch (since) {
                 case 'daily':
-                    // console.log("Case: daily");
                     apiSince = "since=daily"
                     break;
                 case 'weekly':
                     apiSince = "since=weekly"
-                    //console.log(apiSince);
                     break;
                 case 'monthly':
                     apiSince = "since=monthly"
-                    //console.log(apiSince);
                     break;
                 default: // Do nothing.
             };
 
             break;
+
         default:
     };
 
@@ -1986,7 +1993,7 @@ function getTrending() {
 
             console.log(response);
 
-            var trendingCol = document.createElement('div');
+            let trendingCol = document.createElement('div');
             trendingCol.setAttribute('class', 'trend-cont');
 
             Object.keys(response).forEach(key => {
@@ -2014,7 +2021,7 @@ function getTrending() {
 
                         // Check if description is empty, act accordingly.
                         if (response[key].description === "") {
-                            descriptionR = "No Description."
+                            descriptionR = "No description."
                         }
 
                         if (parseInt(key) < 25) {
@@ -2023,11 +2030,11 @@ function getTrending() {
                                     <p class="rank" style="float: right;">${++key}</p>
                                     <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
-                                    <a class="trending-cards text-limit" href="${urlR}" target="_blank">${urlR}</a>
-                                    <p class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
+                                    <p id="card-info" class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
                                     <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
-                                    <p class="trending-cards"><img src="../images/star.svg" width="16" alt="Star icon."> ${starsR}</p>
-                                    <p class="trending-cards"><img src="../images/fork.svg" width="16;" alt="Fork icon."> ${forksR}</p>
+                                    <p class="trending-cards link-icon"><img src="../images/star.svg" height="18" alt="Star icon"> ${starsR}</p>
+                                    <p class="trending-cards link-icon"><img src="../images/fork.svg" height="18;" alt="Fork icon"> ${forksR}</p>
+                                    <a class="trending-cards link-icon" href="${urlR}" target="_blank"><img src="../images/link.svg" height="18" alt="Link icon" style="float: right;"></a>
                                 </div>`);
                         }
 
@@ -2035,24 +2042,26 @@ function getTrending() {
                     case 'developers':
                         let usernameD = JSON.stringify(response[key].username).replace(/['"]+/g, '');
                         let nameD = JSON.stringify(response[key].name).replace(/['"]+/g, '');
-                        // let type = JSON.stringify(response.data[key].type).replace(/['"]+/g, '');
                         let urlD = JSON.stringify(response[key].url).replace(/['"]+/g, '');
                         let avatarD = JSON.stringify(response[key].avatar);
                         let repoNameD = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
                         let repoDescriptionD = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
                         let repoUrlD = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
 
-                        let stars = JSON.stringify(response[key].stars);
-
                         // Check if repo.name is empty, act accordingly.
                         if (response[key].repo.name === "") {
                             repoNameD = "No repo name"
                         }
 
+                        // Check if repo.description is empty, act accordingly.
+                        if (response[key].repo.description === "") {
+                            repoDescriptionD = "No description"
+                        }
+
                         if (parseInt(key) < 24) {
                             trendingCol.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
-                                    <p style="float: right;">${++key}</p>
+                                    <p class="rank" style="float: right;">${++key}</p>
                                     <img src=${avatarD} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${nameD}</h4>
                                     <a class="trending-cards" href="${urlD}" target="_blank">${usernameD}</a>
