@@ -2032,9 +2032,9 @@ function getTrending() {
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
                                     <p id="card-info" class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
                                     <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
-                                    <p class="trending-cards link-icon"><img src="../images/star.svg" height="18" alt="Star icon"> ${starsR}</p>
-                                    <p class="trending-cards link-icon"><img src="../images/fork.svg" height="18;" alt="Fork icon"> ${forksR}</p>
-                                    <a class="trending-cards link-icon" href="${urlR}" target="_blank"><img src="../images/link.svg" height="18" alt="Link icon" style="float: right;"></a>
+                                    <p class="trending-cards link-icon"><img class="link-img" src="../images/star-solid.svg" height="16" alt="Star icon"> ${starsR}</p>
+                                    <p class="trending-cards link-icon"><img class="link-img" src="../images/code-branch-solid.svg" height="16;" alt="Fork icon"> ${forksR}</p>
+                                    <a class="trending-cards link-icon" href="${urlR}" target="_blank"><img src="../images/link-solid.svg" height="16" alt="Link icon"></a>
                                 </div>`);
                         }
 
