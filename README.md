@@ -1,2 +1,1 @@
-![./images/banner.png]
-![/public/images/banner.png]
+![](./images/banner.png)
