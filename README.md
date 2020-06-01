@@ -1,1 +1,1 @@
-GitYeti
+![/images/banner.png]

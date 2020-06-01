@@ -5,6 +5,7 @@ console.log("main.js is working.");
 // Remove text-limit class if on a mobile device.
 $(window).resize(function () {
     if ($(window).width() <= 768) {
+        $('h4').removeClass('text-limit');
         $('p').removeClass('text-limit');
     }
 });
@@ -2002,6 +2003,7 @@ function getTrending() {
                     case 'repositories':
 
                         let authorR = JSON.stringify(response[key].author).replace(/['"]+/g, '');
+                        let nameR = JSON.stringify(response[key].name).replace(/['"]+/g, '');
                         let avatarR = JSON.stringify(response[key].avatar);
                         let urlR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
                         let descriptionR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
@@ -2030,6 +2032,7 @@ function getTrending() {
                                     <p class="rank" style="float: right;">${++key}</p>
                                     <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
                                     <h4 class="trending-cards text-limit">${authorR}</h4>
+                                    <h5 class="trending-cards text-limit">${nameR}</h5>
                                     <p id="card-info" class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
                                     <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
                                     <p class="trending-cards link-icon"><img class="link-img" src="../images/star-solid.svg" height="16" alt="Star icon"> ${starsR}</p>
@@ -2040,8 +2043,8 @@ function getTrending() {
 
                         break;
                     case 'developers':
-                        let usernameD = JSON.stringify(response[key].username).replace(/['"]+/g, '');
                         let nameD = JSON.stringify(response[key].name).replace(/['"]+/g, '');
+                        let usernameD = JSON.stringify(response[key].username).replace(/['"]+/g, '');
                         let urlD = JSON.stringify(response[key].url).replace(/['"]+/g, '');
                         let avatarD = JSON.stringify(response[key].avatar);
                         let repoNameD = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
@@ -2063,11 +2066,10 @@ function getTrending() {
                                 `<div class="content trend-divs rounded">
                                     <p class="rank" style="float: right;">${++key}</p>
                                     <img src=${avatarD} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards text-limit">${nameD}</h4>
-                                    <a class="trending-cards" href="${urlD}" target="_blank">${usernameD}</a>
-                                    <h4 class="trending-cards text-limit">${repoNameD}</h4>
+                                    <h4 class="trending-cards text-limit">${usernameD} / ${nameD}</h4>
+                                    <h5 class="trending-cards text-limit">${repoNameD}</h5>
                                     <p class="trending-cards text-limit" title="${repoDescriptionD}">${repoDescriptionD}</p>
-                                    <a class="trending-cards text-limit" href="${repoUrlD}" target="_blank">Link</a>
+                                    <a class="trending-cards link-icon" href="${repoUrlD}" target="_blank"><img src="../images/link-solid.svg" height="16" alt="Link icon"></a>
                                 </div>`);
                         }
 
