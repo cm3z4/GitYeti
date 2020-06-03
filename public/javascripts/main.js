@@ -12,6 +12,7 @@ $(window).resize(function () {
 
 $(window).resize(function () {
     if ($(window).width() >= 768) {
+        $('h4').addClass('text-limit');
         $('p').addClass('text-limit');
     }
 });
@@ -1992,7 +1993,7 @@ function getTrending() {
         url: ajaxURL,
         success: function (response) {
 
-            console.log(response);
+            // console.log(response);
 
             let trendingCol = document.createElement('div');
             trendingCol.setAttribute('class', 'trend-cont');
@@ -2004,7 +2005,7 @@ function getTrending() {
 
                         let authorR = JSON.stringify(response[key].author).replace(/['"]+/g, '');
                         let nameR = JSON.stringify(response[key].name).replace(/['"]+/g, '');
-                        let avatarR = JSON.stringify(response[key].avatar);
+                        let avatarR = JSON.stringify(response[key].avatar).replace(/['"]+/g, '');
                         let urlR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
                         let descriptionR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
                         let starsR = JSON.stringify(response[key].stars);
@@ -2027,18 +2028,102 @@ function getTrending() {
                         }
 
                         if (parseInt(key) < 25) {
-                            trendingCol.insertAdjacentHTML("beforeend",
-                                `<div class="content trend-divs rounded">
-                                    <p class="rank" style="float: right;">${++key}</p>
-                                    <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards text-limit">${authorR}</h4>
-                                    <h5 class="trending-cards text-limit">${nameR}</h5>
-                                    <p id="card-info" class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
-                                    <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
-                                    <p class="trending-cards link-icon"><img class="link-img" src="../images/star-solid.svg" height="16" alt="Star icon"> ${starsR}</p>
-                                    <p class="trending-cards link-icon"><img class="link-img" src="../images/code-branch-solid.svg" height="16;" alt="Fork icon"> ${forksR}</p>
-                                    <a class="trending-cards link-icon" href="${urlR}" target="_blank"><img src="../images/link-solid.svg" height="16" alt="Link icon"></a>
-                                </div>`);
+
+                            // BAD CODE
+
+                            // trendingCol.insertAdjacentHTML("beforeend",
+                            //     `<div class="content trend-divs rounded">
+                            //         <p class="rank" style="float: right;">${++key}</p>
+                            //         <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
+                            //         <h4 class="trending-cards text-limit">${authorR}</h4>
+                            //         <h5 class="trending-cards text-limit">${nameR}</h5>
+                            //         <p id="card-info" class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
+                            //         <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
+                            //         <p class="trending-cards link-icon"><img class="link-img" src="../images/star-solid.svg" height="16" alt="Star icon"> ${starsR}</p>
+                            //         <p class="trending-cards link-icon"><img class="link-img" src="../images/code-branch-solid.svg" height="16;" alt="Fork icon"> ${forksR}</p>
+                            //         <a class="trending-cards link-icon" href="${urlR}" target="_blank"><img src="../images/link-solid.svg" height="16" alt="Link icon"></a>
+                            //     </div>`);
+
+                            // BETTER CODE
+
+                            const cardDiv = document.createElement('div');
+                            cardDiv.className = 'trend-divs rounded';
+
+                            const rankP = document.createElement('p');
+                            rankP.className = 'rank';
+                            rankP.textContent = + ++key;
+
+                            const cardAvatarR = document.createElement('img');
+                            cardAvatarR.className = 'spacing rounded';
+                            cardAvatarR.src = avatarR;
+                            cardAvatarR.height = '40';
+                            cardAvatarR.width = '40';
+                            cardAvatarR.setAttribute('loading', 'lazy');
+
+                            const cardAuthorR = document.createElement('h4');
+                            cardAuthorR.className = 'spacing text-limit';
+                            cardAuthorR.textContent = authorR;
+
+                            const cardNameR = document.createElement('h5');
+                            cardNameR.className = 'spacing text-limit';
+                            cardNameR.textContent = nameR;
+
+                            const cardDescriptionR = document.createElement('p');
+                            cardDescriptionR.className = 'spacing text-limit';
+                            cardDescriptionR.setAttribute('title', descriptionR);
+                            cardDescriptionR.textContent = descriptionR;
+
+                            const cardLangR = document.createElement('p');
+                            cardLangR.className = 'spacing';
+                            cardLangR.textContent = langR;
+                            cardLangR.style.color = langColorR;
+
+                            const cardStarR = document.createElement('p');
+                            cardStarR.className = 'spacing link-icon';
+                            cardStarR.textContent = " " + starsR;
+
+                            const cardStarImgR = document.createElement('img');
+                            cardStarImgR.className = 'link-img';
+                            cardStarImgR.src = '../images/star-solid.svg';
+                            cardStarImgR.setAttribute('loading', 'lazy');
+                            cardStarImgR.height = '16';
+                            cardStarR.prepend(cardStarImgR);
+
+                            const cardForksR = document.createElement('p');
+                            cardForksR.className = 'spacing link-icon';
+                            cardForksR.textContent = " " + forksR;
+
+                            const cardForksImgR = document.createElement('img');
+                            cardForksImgR.className = 'link-img';
+                            cardForksImgR.src = '../images/code-branch-solid.svg';
+                            cardForksImgR.setAttribute('loading', 'lazy');
+                            cardForksImgR.height = '16';
+                            cardForksR.prepend(cardForksImgR);
+
+                            const cardLinkR = document.createElement('a');
+                            cardLinkR.className = 'spacing link-icon';
+                            cardLinkR.href = urlR;
+                            cardLinkR.target = "_blank"
+
+                            const cardLinkImgR = document.createElement('img');
+                            cardLinkImgR.className = 'link-img';
+                            cardLinkImgR.src = '../images/link-solid.svg';
+                            cardLinkImgR.setAttribute('loading', 'lazy');
+                            cardLinkImgR.height = '16';
+                            cardLinkR.prepend(cardLinkImgR);
+
+                            cardDiv.append(rankP);
+                            cardDiv.append(cardAvatarR);
+                            cardDiv.append(cardAuthorR);
+                            cardDiv.append(cardNameR);
+                            cardDiv.append(cardDescriptionR);
+                            cardDiv.append(cardLangR);
+                            cardDiv.append(cardStarR);
+                            cardDiv.append(cardForksR);
+                            cardDiv.append(cardLinkR);
+
+                            trendingCol.append(cardDiv);
+
                         }
 
                         break;
@@ -2061,7 +2146,7 @@ function getTrending() {
                             repoDescriptionD = "No description"
                         }
 
-                        if (parseInt(key) < 24) {
+                        if (parseInt(key) < 25) {
                             trendingCol.insertAdjacentHTML("beforeend",
                                 `<div class="content trend-divs rounded">
                                     <p class="rank" style="float: right;">${++key}</p>

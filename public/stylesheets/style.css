@@ -54,10 +54,10 @@ a {
 }
 
 .trend-divs:hover {
-  transform: scale(1.02);
+  transform: scale(1.06);
 }
 
-.trending-cards {
+.spacing {
   margin: .8rem 0 !important;
 }
 
@@ -72,6 +72,7 @@ a {
 .rank {
   color: #e53170;
   font-weight: bold;
+  float: right;
 }
 
 .link-icon {
