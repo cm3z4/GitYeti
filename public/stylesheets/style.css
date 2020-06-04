@@ -61,6 +61,10 @@ a {
   margin: .8rem 0 !important;
 }
 
+p {
+  line-height: 1.4em;
+}
+
 .text-limit {
   display: block;
   width: auto;
@@ -76,9 +80,15 @@ a {
 }
 
 .link-icon {
-  display: inline;
-  padding: .8rem 1rem 0 0;
+  display: inline-block;
+  padding: 0 1rem 0 0;
+  line-height: 1.4rem;
+  margin-bottom: 0;
+}
 
+.link {
+  padding: 0;
+  float: right;
 }
 
 /* MOBILE */

@@ -2079,7 +2079,7 @@ function getTrending() {
                             cardLangR.style.color = langColorR;
 
                             const cardStarR = document.createElement('p');
-                            cardStarR.className = 'spacing link-icon';
+                            cardStarR.className = 'link-icon';
                             cardStarR.textContent = " " + starsR;
 
                             const cardStarImgR = document.createElement('img');
@@ -2090,7 +2090,7 @@ function getTrending() {
                             cardStarR.prepend(cardStarImgR);
 
                             const cardForksR = document.createElement('p');
-                            cardForksR.className = 'spacing link-icon';
+                            cardForksR.className = 'link-icon';
                             cardForksR.textContent = " " + forksR;
 
                             const cardForksImgR = document.createElement('img');
@@ -2101,12 +2101,12 @@ function getTrending() {
                             cardForksR.prepend(cardForksImgR);
 
                             const cardLinkR = document.createElement('a');
-                            cardLinkR.className = 'spacing link-icon';
+                            cardLinkR.className = 'link-icon link';
                             cardLinkR.href = urlR;
                             cardLinkR.target = "_blank"
 
                             const cardLinkImgR = document.createElement('img');
-                            cardLinkImgR.className = 'link-img';
+                            cardLinkImgR.className = '';
                             cardLinkImgR.src = '../images/link-solid.svg';
                             cardLinkImgR.setAttribute('loading', 'lazy');
                             cardLinkImgR.height = '16';
