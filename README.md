@@ -4,4 +4,10 @@
 
 **GitYeti** was born to do one thing and one thing well, GET GitHub trending repositories/developers in style.
 
+## Credits
+- [github-trending-api](https://github.com/huchenme/github-trending-api)
+
+## License
+* MIT
+
 **More to come!**
