@@ -27,16 +27,35 @@ a {
 
 /* TRENDING */
 
-#since-drop,
-#type-drop,
-#lang-drop {
-  background-color: #202225 !important;
-  color: var(--dark-paragraph) !important;
-  border: none !important;
-  outline: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  width: 12rem;
+.drop-menus {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 196px;
+  height: 48px;
+  font-size: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: #202225;
+  border: none;
+  border-bottom: 2px solid #e53170;
+  color: var(--dark-paragraph);
+  padding: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+  outline: none;
+}
+
+.drop-menus:hover {
+color: #e53170;
+}
+
+/* For IE <= 11 */
+.drop-menu::-ms-expand {
+  display: none;
 }
 
 .trend-divs {
