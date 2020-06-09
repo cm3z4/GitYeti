@@ -25,6 +25,11 @@ body {
   background-color: var(--dark-1);
 }
 
+.navbar-toggler {
+  border: 2px solid var(--dark-red) !important;
+  outline: none !important;
+}
+
 .drop-menus {
   appearance: none;
   -webkit-appearance: none;
