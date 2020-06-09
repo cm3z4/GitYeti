@@ -19,10 +19,17 @@
   background-color: var(--dark-3);
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--dark-paragraph);
   background-color: var(--dark-1);
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
 }
 
 .navbar-toggler {
@@ -111,6 +118,15 @@ p {
 .link {
   padding: 0;
   float: right;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  /* Set the fixed height of the footer here */
+  line-height: 60px;
 }
 
 /* MOBILE */
