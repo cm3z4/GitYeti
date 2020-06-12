@@ -6,14 +6,14 @@ console.log("main.js is working.");
 $(window).resize(function () {
     if ($(window).width() <= 768) {
         $('h4').removeClass('text-limit');
-        $('p').removeClass('text-limit');
+        $('.p-descr').removeClass('text-limit');
     }
 });
 
 $(window).resize(function () {
     if ($(window).width() >= 768) {
         $('h4').addClass('text-limit');
-        $('p').addClass('text-limit');
+        $('.p-descr').addClass('text-limit');
     }
 });
 
@@ -2007,7 +2007,7 @@ function getTrending() {
                         let nameR = JSON.stringify(response[key].name).replace(/['"]+/g, '');
                         let avatarR = JSON.stringify(response[key].avatar).replace(/['"]+/g, '');
                         let urlR = JSON.stringify(response[key].url).replace(/['"]+/g, '');
-                        let descriptionR = JSON.stringify(response[key].description).replace(/['"]+/g, '');
+                        let descriptionR = JSON.stringify(response[key].description).replace(/['"]+/g, '').trim();
                         let starsR = JSON.stringify(response[key].stars);
                         let forksR = JSON.stringify(response[key].forks).replace(/['"]+/g, '');
                         let langR;
@@ -2056,8 +2056,8 @@ function getTrending() {
                             const cardAvatarR = document.createElement('img');
                             cardAvatarR.className = 'spacing rounded';
                             cardAvatarR.src = avatarR;
-                            cardAvatarR.height = '40';
-                            cardAvatarR.width = '40';
+                            cardAvatarR.height = '46';
+                            cardAvatarR.width = '46';
                             cardAvatarR.setAttribute('loading', 'lazy');
 
                             const cardAuthorR = document.createElement('h4');
@@ -2069,7 +2069,7 @@ function getTrending() {
                             cardNameR.textContent = nameR;
 
                             const cardDescriptionR = document.createElement('p');
-                            cardDescriptionR.className = 'spacing text-limit';
+                            cardDescriptionR.className = 'p-descr spacing text-limit';
                             cardDescriptionR.setAttribute('title', descriptionR);
                             cardDescriptionR.textContent = descriptionR;
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -19,9 +19,41 @@
 
     <!-- Banner Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark dark-1">
-        <a class="navbar-brand mx-auto" href="#" style="font-family: 'Bowlby One', cursive;"><img
-                src="./images/yeti.png" style="height: 2.8rem; margin-right: 12px;">GitYeti</a>
+        <a class="navbar-brand" href="#" style="font-family: 'Bowlby One', cursive;"><img src="./images/yeti.png"
+                style="height: 2.8rem; margin-right: 12px;" alt="GitYeti banner">GitYeti</a>
+
+        <a class="ml-auto" href="#" data-toggle="modal" data-target="#aboutModal"><img
+                src="./images/info-circle-solid.svg" style="height: 1.2rem;" alt="Info icon"></a>
     </nav>
+
+    <!-- About Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content text-center dark-1">
+                <div class="modal-header mx-auto" style="border-bottom: 1px solid #e53170;">
+                    <h5 class="modal-title">About <span style="color: #e53170;">GitYeti</span></h5>
+                </div>
+                <div class="modal-body mx-2">
+                    <p>GitYeti uses the <a href="https://github.com/huchenme/github-trending-api"
+                            target="_blank">github-trending-api</a>
+                        to display GitHub trending
+                        repositories/developers in a uniform,
+                        mobile-responsive and card-based design.</p>
+
+                    <p>License: <a href="./pdf/mit.pdf" target="_blank">MIT</a></p>
+
+                    <!-- Buy Me a Coffee -->
+                    <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a
+                        class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/cm3z4"><img
+                            src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span
+                            style="margin-left:5px;">Buy me a coffee</span></a>
+                </div>
+                <div class="modal-footer" style="border-top: none;">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Selection Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark dark-3">
