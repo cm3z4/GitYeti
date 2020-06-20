@@ -1993,7 +1993,7 @@ function getTrending() {
         url: ajaxURL,
         success: function (response) {
 
-            // console.log(response);
+            console.log(response);
 
             let trendingCol = document.createElement('div');
             trendingCol.setAttribute('class', 'trend-cont');
@@ -2029,29 +2029,12 @@ function getTrending() {
 
                         if (parseInt(key) < 25) {
 
-                            // BAD CODE
-
-                            // trendingCol.insertAdjacentHTML("beforeend",
-                            //     `<div class="content trend-divs rounded">
-                            //         <p class="rank" style="float: right;">${++key}</p>
-                            //         <img src=${avatarR} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                            //         <h4 class="trending-cards text-limit">${authorR}</h4>
-                            //         <h5 class="trending-cards text-limit">${nameR}</h5>
-                            //         <p id="card-info" class="trending-cards text-limit" title="${descriptionR}">${descriptionR}</p>
-                            //         <p class="trending-cards" style="color: ${langColorR}">${langR}</p>
-                            //         <p class="trending-cards link-icon"><img class="link-img" src="../images/star-solid.svg" height="16" alt="Star icon"> ${starsR}</p>
-                            //         <p class="trending-cards link-icon"><img class="link-img" src="../images/code-branch-solid.svg" height="16;" alt="Fork icon"> ${forksR}</p>
-                            //         <a class="trending-cards link-icon" href="${urlR}" target="_blank"><img src="../images/link-solid.svg" height="16" alt="Link icon"></a>
-                            //     </div>`);
-
-                            // BETTER CODE
-
                             const cardDiv = document.createElement('div');
                             cardDiv.className = 'trend-divs rounded';
 
-                            const rankP = document.createElement('p');
-                            rankP.className = 'rank';
-                            rankP.textContent = + ++key;
+                            const rankR = document.createElement('p');
+                            rankR.className = 'rank';
+                            rankR.textContent = + ++key;
 
                             const cardAvatarR = document.createElement('img');
                             cardAvatarR.className = 'spacing rounded';
@@ -2112,7 +2095,7 @@ function getTrending() {
                             cardLinkImgR.height = '16';
                             cardLinkR.prepend(cardLinkImgR);
 
-                            cardDiv.append(rankP);
+                            cardDiv.append(rankR);
                             cardDiv.append(cardAvatarR);
                             cardDiv.append(cardAuthorR);
                             cardDiv.append(cardNameR);
@@ -2128,34 +2111,75 @@ function getTrending() {
 
                         break;
                     case 'developers':
+
                         let nameD = JSON.stringify(response[key].name).replace(/['"]+/g, '');
                         let usernameD = JSON.stringify(response[key].username).replace(/['"]+/g, '');
-                        let urlD = JSON.stringify(response[key].url).replace(/['"]+/g, '');
-                        let avatarD = JSON.stringify(response[key].avatar);
+                        let userUrlD = JSON.stringify(response[key].url).replace(/['"]+/g, '');
+                        let avatarD = JSON.stringify(response[key].avatar).replace(/['"]+/g, '');
                         let repoNameD = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
                         let repoDescriptionD = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
                         let repoUrlD = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
 
                         // Check if repo.name is empty, act accordingly.
                         if (response[key].repo.name === "") {
-                            repoNameD = "No repo name"
+                            repoNameD = "No repo name."
                         }
 
                         // Check if repo.description is empty, act accordingly.
                         if (response[key].repo.description === "") {
-                            repoDescriptionD = "No description"
+                            repoDescriptionD = "No description."
                         }
 
                         if (parseInt(key) < 25) {
-                            trendingCol.insertAdjacentHTML("beforeend",
-                                `<div class="content trend-divs rounded">
-                                    <p class="rank" style="float: right;">${++key}</p>
-                                    <img src=${avatarD} loading="lazy" alt="GitHub repo image" width="40" height="40" class="trending-cards rounded">
-                                    <h4 class="trending-cards text-limit">${usernameD} / ${nameD}</h4>
-                                    <h5 class="trending-cards text-limit">${repoNameD}</h5>
-                                    <p class="trending-cards text-limit" title="${repoDescriptionD}">${repoDescriptionD}</p>
-                                    <a class="trending-cards link-icon" href="${repoUrlD}" target="_blank"><img src="../images/link-solid.svg" height="16" alt="Link icon"></a>
-                                </div>`);
+
+                            const cardDiv = document.createElement('div');
+                            cardDiv.className = 'trend-divs rounded';
+
+                            const rankD = document.createElement('p');
+                            rankD.className = 'rank';
+                            rankD.textContent = + ++key;
+
+                            const cardAvatarD = document.createElement('img');
+                            cardAvatarD.className = 'spacing rounded';
+                            cardAvatarD.src = avatarD;
+                            cardAvatarD.height = '46';
+                            cardAvatarD.width = '46';
+                            cardAvatarD.setAttribute('loading', 'lazy');
+
+                            const cardNameD = document.createElement('h4');
+                            cardNameD.className = "spacing text-limit";
+                            cardNameD.textContent = usernameD + " / " + nameD;
+
+                            const cardRepoNameD = document.createElement('h5');
+                            cardNameD.classRepoName = 'spacing text-limit';
+                            cardRepoNameD.textContent = repoNameD;
+
+                            const cardDescriptionD = document.createElement('p');
+                            cardDescriptionD.className = 'p-descr spacing text-limit';
+                            cardDescriptionD.setAttribute('title', repoDescriptionD);
+                            cardDescriptionD.textContent = repoDescriptionD;
+
+                            const cardLinkD = document.createElement('a');
+                            cardLinkD.className = 'link-icon link';
+                            cardLinkD.href = repoUrlD;
+                            cardLinkD.target = "_blank"
+
+                            const cardLinkImgD = document.createElement('img');
+                            cardLinkImgD.className = '';
+                            cardLinkImgD.src = '../images/link-solid.svg';
+                            cardLinkImgD.setAttribute('loading', 'lazy');
+                            cardLinkImgD.height = '16';
+                            cardLinkD.prepend(cardLinkImgD);
+
+                            cardDiv.append(rankD);
+                            cardDiv.append(cardAvatarD);
+                            cardDiv.append(cardNameD);
+                            cardDiv.append(cardRepoNameD);
+                            cardDiv.append(cardDescriptionD);
+                            cardDiv.append(cardLinkD)
+
+                            trendingCol.append(cardDiv);
+
                         }
 
                         break;
