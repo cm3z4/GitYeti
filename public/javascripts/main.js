@@ -7,6 +7,8 @@ $(window).resize(function () {
     if ($(window).width() <= 768) {
         $('h4').removeClass('text-limit');
         $('.p-descr').removeClass('text-limit');
+        $('.p-descr').removeAttr('data-toggle');
+
     }
 });
 
@@ -14,7 +16,15 @@ $(window).resize(function () {
     if ($(window).width() >= 768) {
         $('h4').addClass('text-limit');
         $('.p-descr').addClass('text-limit');
+        $('.p-descr').attr('data-toggle', 'tooltip');
     }
+});
+
+// Bootstrap tooltip trigger.
+$(document).ready(function () {
+    $("body").tooltip({
+        selector: '[data-toggle=tooltip]'
+    });
 });
 
 // Fill #lang-drop with langs data.
@@ -2053,6 +2063,7 @@ function getTrending() {
 
                             const cardDescriptionR = document.createElement('p');
                             cardDescriptionR.className = 'p-descr spacing text-limit';
+                            cardDescriptionR.setAttribute('data-toggle', 'tooltip');
                             cardDescriptionR.setAttribute('title', descriptionR);
                             cardDescriptionR.textContent = descriptionR;
 
@@ -2156,6 +2167,7 @@ function getTrending() {
 
                             const cardDescriptionD = document.createElement('p');
                             cardDescriptionD.className = 'p-descr spacing text-limit';
+                            cardDescriptionD.setAttribute('data-toggle', 'tooltip');
                             cardDescriptionD.setAttribute('title', repoDescriptionD);
                             cardDescriptionD.textContent = repoDescriptionD;
 
