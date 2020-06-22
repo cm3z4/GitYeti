@@ -2,29 +2,42 @@ console.log("main.js is working.");
 
 // This function uses the https://github.com/huchenme/github-trending-api repo, see link for docs.
 
-// Remove text-limit class if on a mobile device.
-$(window).resize(function () {
-    if ($(window).width() <= 768) {
+// Remove certain classes if a mobile device.
+function checkForMobileScreen() {
+    if ($(window).width() < 768) {
         $('h4').removeClass('text-limit');
         $('.p-descr').removeClass('text-limit');
         $('.p-descr').removeAttr('data-toggle');
-
+        console.log("Window < 768");
     }
-});
+}
 
-$(window).resize(function () {
-    if ($(window).width() >= 768) {
-        $('h4').addClass('text-limit');
-        $('.p-descr').addClass('text-limit');
-        $('.p-descr').attr('data-toggle', 'tooltip');
-    }
-});
-
-// Bootstrap tooltip trigger.
 $(document).ready(function () {
+
+    // Remove certain classes if a mobile device upon resize.
+    $(window).resize(function () {
+        if ($(window).width() <= 768) {
+            $('h4').removeClass('text-limit');
+            $('.p-descr').removeClass('text-limit');
+            $('.p-descr').removeAttr('data-toggle');
+            console.log("Window resize" + $(window).width());
+        }
+    });
+
+    // Add certain classes if not a mobile device upon resize.
+    $(window).resize(function () {
+        if ($(window).width() >= 768) {
+            $('h4').addClass('text-limit');
+            $('.p-descr').addClass('text-limit');
+            $('.p-descr').attr('data-toggle', 'tooltip');
+        }
+    });
+
+    // Bootstrap tooltip trigger.
     $("body").tooltip({
         selector: '[data-toggle=tooltip]'
     });
+
 });
 
 // Fill #lang-drop with langs data.
@@ -2003,7 +2016,7 @@ function getTrending() {
         url: ajaxURL,
         success: function (response) {
 
-            console.log(response);
+            // console.log(response);
 
             let trendingCol = document.createElement('div');
             trendingCol.setAttribute('class', 'trend-cont');
@@ -2204,6 +2217,7 @@ function getTrending() {
                 $('#sandbox').html(`<div class="text-center"><p class="mt-5 mb-0" style="font-weight: bold">&#128577 No repos/devs found.</p>`);
             } else {
                 $('#sandbox').html(trendingCol);
+                checkForMobileScreen();
             }
 
         },
@@ -2220,7 +2234,7 @@ function getTrending() {
 
 // Call getTrending() when any select elements are changed.
 $('.nav-item').on('change', function () {
-    getTrending()
+    getTrending();
     // $('#navSelectDiv').collapse('hide');
 });
 
