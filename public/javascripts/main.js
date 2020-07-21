@@ -2140,18 +2140,19 @@ function getTrending() {
                         let usernameD = JSON.stringify(response[key].username).replace(/['"]+/g, '');
                         let userUrlD = JSON.stringify(response[key].url).replace(/['"]+/g, '');
                         let avatarD = JSON.stringify(response[key].avatar).replace(/['"]+/g, '');
-                        let repoNameD = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
-                        let repoDescriptionD = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
-                        let repoUrlD = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
 
-                        // Check if repo.name is empty, act accordingly.
-                        if (response[key].repo.name === "") {
+                        let repoNameD = "";
+                        let repoDescriptionD = "";
+                        let repoUrlD = "";
+
+                        if (response[key].repo) {
+                            repoNameD = JSON.stringify(response[key].repo.name).replace(/['"]+/g, '');
+                            repoDescriptionD = JSON.stringify(response[key].repo.description).replace(/['"]+/g, '');
+                            repoUrlD = JSON.stringify(response[key].repo.url).replace(/['"]+/g, '');
+                        } else {
                             repoNameD = "No repo name."
-                        }
-
-                        // Check if repo.description is empty, act accordingly.
-                        if (response[key].repo.description === "") {
-                            repoDescriptionD = "No description."
+                            repoDescriptionD = "No repo description."
+                            repoUrlD = userUrlD;
                         }
 
                         if (parseInt(key) < 25) {
@@ -2175,7 +2176,7 @@ function getTrending() {
                             cardNameD.textContent = usernameD + " / " + nameD;
 
                             const cardRepoNameD = document.createElement('h5');
-                            cardNameD.classRepoName = 'spacing text-limit';
+                            cardRepoNameD.className = 'spacing text-limit';
                             cardRepoNameD.textContent = repoNameD;
 
                             const cardDescriptionD = document.createElement('p');
