@@ -1,19 +1,25 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-var axios = require('axios');
+var axios = require("axios");
 
-router.get('/:apiType/:apiLang/:apiSince', (req, res, next) => {
+router.get("/:apiType/:apiLang/:apiSince", (req, res, next) => {
   console.log(req.params.apiType);
   console.log(req.params.apiLang);
-  console.log(req.params.apiSince)
+  console.log(req.params.apiSince);
 
-  axios.get(`https://ghapi.huchen.dev/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`)
+  // Temporarily routing API calls to akane10's server.
+  axios
+    .get(
+      `https://gtrend.yapie.me/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`
+    )
+
+    // axios.get(`https://ghapi.huchen.dev/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`)
     .then(function (response) {
       res.json(response.data);
-    }).catch(function (err) {
-      console.log(err)
     })
-
+    .catch(function (err) {
+      console.log(err);
+    });
 });
 
 module.exports = router;
