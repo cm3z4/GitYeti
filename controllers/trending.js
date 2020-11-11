@@ -10,7 +10,7 @@ router.get("/:apiType/:apiLang/:apiSince", (req, res, next) => {
   // Temporarily routing API calls to akane10's server.
   axios
     .get(
-      `https://gtrend.yapie.me/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`
+      `https://hackertab.pupubird.com/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`
     )
 
     // axios.get(`https://ghapi.huchen.dev/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`)
