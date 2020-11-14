@@ -7,10 +7,10 @@ router.get("/:apiType/:apiLang/:apiSince", (req, res, next) => {
   console.log(req.params.apiLang);
   console.log(req.params.apiSince);
 
-  // Temporarily routing API calls to akane10's server.
+  // Temporarily routing API calls to wonderbeyond's server.
   axios
     .get(
-      `https://hackertab.pupubird.com/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`
+      `https://github-trending-api-wonder.herokuapp.com/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`
     )
 
     // axios.get(`https://ghapi.huchen.dev/${req.params.apiType}${req.params.apiLang}${req.params.apiSince}`)
