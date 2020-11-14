@@ -34,7 +34,7 @@ body {
 
 /* Firefox */
 * {
-  scrollbar-color: var(--dark-red) var(--dark-3);
+  scrollbar-color: var(--dark-red) var(--dark-2);
 }
 
 /* Chrome/Edge/Safari */
@@ -43,16 +43,22 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--dark-3);
+  background: var(--dark-red);
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--dark-red);
+  background: var(--dark-2);
 }
 
 .navbar-toggler {
   border: 2px solid var(--dark-red) !important;
   outline: none !important;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
 .drop-menus {
@@ -66,8 +72,7 @@ body {
   cursor: pointer;
   border-radius: 0;
   background-color: var(--dark-1);
-  border: none;
-  border-bottom: 2px solid var(--dark-red);
+  border: 2px solid var(--dark-red);
   color: var(--dark-paragraph);
   padding: 10px;
   appearance: none;
